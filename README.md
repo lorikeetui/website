@@ -1,4 +1,4 @@
-# lorikeetui-website
+# Lorikeet UI Website
 
 ## Build Setup
 

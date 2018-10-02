@@ -5,8 +5,8 @@
   "license": "",
   "homepage": "https://lorikeetui.github.io/website",
   "scripts": {
-    "start": "NODE_PRESERVE_SYMLINKS=1 react-static start",
-    "build": "NODE_PRESERVE_SYMLINKS=1 react-static build",
+    "start": "react-static start",
+    "build": "react-static build",
     "serve": "serve dist -p 3000",
     "optimize-svg": "find ./src -name '*.svg' -exec svgo --config '{ \"plugins\": [ { \"removeDesc\": {\"removeAny\": true}, \"removeTitle\": true } ] }' {} \\;",
     "generate-favicon": "icon-gen -i favicon.png -o public -r",
