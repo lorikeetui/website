@@ -13,13 +13,13 @@ const LorikeetNavbar = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  position: fixed; 
+  position: fixed;
   z-index: 5;
-  
+
   .brand {
     display: flex;
   }
-`;
+`
 
 const End = styled.div`
   width: auto;
@@ -33,23 +33,27 @@ const End = styled.div`
   button {
     margin: 0 0 0 10px;
   }
-`;
+`
 
 const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
-    <Link to={url}><Text size="xlarge">{children}</Text></Link>
+    <Link to={url}>
+      <Text size="xlarge">{children}</Text>
+    </Link>
   ) : (
     <SafeLink href={url} target="_blank">
       <Text size="xlarge">{children}</Text>
     </SafeLink>
-  );
+  )
 
 class Navbar extends React.Component {
   render() {
     const { menuItems, path } = this.props
     return (
       <LorikeetNavbar>
-        <Link to="/" className="brand">Lorikeet</Link>
+        <Link to="/" className="brand">
+          Lorikeet
+        </Link>
         <End>
           <BreakPoint from="large">
             <ul>
@@ -74,7 +78,3 @@ class Navbar extends React.Component {
 }
 
 export default Navbar
-
-
-
-
