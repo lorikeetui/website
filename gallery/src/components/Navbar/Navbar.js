@@ -48,27 +48,6 @@ const renderMenuItemLink = ({ url, children }) =>
   );
 
 class Navbar extends React.Component {
-
-  scrollingAnimation = () => {
-    let navbarElement = document.getElementById('navbar');
-
-    if(document.documentElement.scrollTop > 150 || document.body.scrollTop > 150) {
-      navbarElement.classList.add('navbar-animation');
-      navbarElement.classList.remove('navbar-inverse-animation');
-    } else {
-      navbarElement.classList.remove('navbar-animation');
-      navbarElement.classList.add('navbar-inverse-animation');
-    }
-  }
-
-  componentDidMount() {
-    this.scrollingAnimation();
-    let self = this;
-    window.addEventListener('scroll', function() {
-      self.scrollingAnimation();
-    });
-  }
-
   render() {
     const menuItems = [
       ['/', 'Overview'],
