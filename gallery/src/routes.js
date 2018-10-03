@@ -1,40 +1,31 @@
-// Styles
-import PageHome from './pages/PageHome'
-import PageColors from './pages/PageColors'
-import PageTheme from './pages/PageTheme'
-import PageText from './pages/PageText'
-import PageIcons from './pages/PageIcons'
+// Design guidelines
+import PagePrinciples from './pages/PageColors'
+import PageBuildingBlocks from './pages/PageText'
+import PageDealingWithLatency from './pages/PageIcons'
+import PageSigningTransactions from './pages/PageAragonApp'
+import PageInformingUsers from './pages/PageAppBar'
+import PageMotion from './pages/PageNavigationBar'
+import PageLayout from './pages/PageAppView'
+import PageTypografy from './pages/PageBadge'
+import PageAccessibility from './pages/PageCountdown'
 
-// Controls
-import PageButton from './pages/PageButton'
+// Reference
+import PageButtons from './pages/PageButton'
 import PageDropDown from './pages/PageDropDown'
 import PageContextMenu from './pages/PageContextMenu'
-import PageRadioButton from './pages/PageRadioButton'
+import PageRadioButtons from './pages/PageRadioButton'
 import PageTextInput from './pages/PageTextInput'
 import PageField from './pages/PageField'
-import PageSafeLink from './pages/PageSafeLink'
-import PageSlider from './pages/PageSlider'
-
-// Other components
-import PageBadge from './pages/PageBadge'
-import PageCircleGraph from './pages/PageCircleGraph'
-import PageCountdown from './pages/PageCountdown'
-import PageInfo from './pages/PageInfo'
-
-// Containers
-import PageAragonApp from './pages/PageAragonApp'
-import PageAppBar from './pages/PageAppBar'
-import PageNavigationBar from './pages/PageNavigationBar'
-import PageAppView from './pages/PageAppView'
-import PageSidePanel from './pages/PageSidePanel'
-import PageCard from './pages/PageCard'
-import PageEmptyStateCard from './pages/PageEmptyStateCard'
+import PageLink from './pages/PageSafeLink'
+import PageCards from './pages/PageCard'
 import PageTable from './pages/PageTable'
+import PageGraph from './pages/PageCircleGraph'
+import PagePanels from './pages/PageSidePanel'
+import PageTheming from './pages/PageTheme'
 
-// Providers
-import PageRedraw from './pages/PageRedraw'
-import PageRedrawFromDate from './pages/PageRedrawFromDate'
-import PageObserve from './pages/PageObserve'
+// Contributing
+import PageJoinTheCommunity from './pages/PageRedraw'
+import PageHowToContribute from './pages/PageInfo'
 
 const preparePage = ([comp, name, path]) => ({
   comp,
@@ -46,44 +37,44 @@ export const PAGE_GROUPS = [
   {
     name: 'Design Guidelines',
     pages: [
-      [PageColors, 'Principles', '/principles'],
-      [PageText, 'Building blocks', '/building-blocks'],
-      [PageIcons, 'Dealing with latency', '/dealing-with-latency'],
-      [PageAragonApp, 'Signing transactions', '/signing-transactions'],
-      [PageAppBar, 'Informing users', '/informing-users'],
-      [PageNavigationBar, 'Motion', '/motion'],
-      [PageAppView, 'Layout', '/layout'],
-      [PageBadge, 'Typografy', '/typografy'],
-      [PageCountdown, 'Accessibility', '/accessibility'],
+      [PagePrinciples, 'Principles', '/principles'],
+      [PageBuildingBlocks, 'Building blocks', '/building-blocks'],
+      [PageDealingWithLatency, 'Dealing with latency', '/dealing-with-latency'],
+      [PageSigningTransactions, 'Signing transactions', '/signing-transactions'],
+      [PageInformingUsers, 'Informing users', '/informing-users'],
+      [PageMotion, 'Motion', '/motion'],
+      [PageLayout, 'Layout', '/layout'],
+      [PageTypografy, 'Typografy', '/typografy'],
+      [PageAccessibility, 'Accessibility', '/accessibility'],
     ].map(preparePage),
   },
   {
     name: 'Reference',
     pages: [
-      [PageButton, 'Buttons', '/buttons'],
+      [PageButtons, 'Buttons', '/buttons'],
       [PageDropDown, 'Drop down', '/drop-down'],
       [PageContextMenu, 'Context menu', '/context-menu'],
-      [PageRadioButton, 'Radio buttons', '/radio-buttons'],
+      [PageRadioButtons, 'Radio buttons', '/radio-buttons'],
       [PageTextInput, 'Text input', '/text-input'],
       [PageField, 'Field', '/field'],
-      [PageSafeLink, 'Links', '/link'],
-      [PageCard, 'Cards', '/cards'],
+      [PageLink, 'Links', '/link'],
+      [PageCards, 'Cards', '/cards'],
       [PageTable, 'Table', '/table'],
-      [PageCircleGraph, 'Graphs', '/graphs'],
-      [PageSidePanel, 'Panels', '/panels'],
-      [PageTheme, 'Theming', '/theming'],
+      [PageGraph, 'Graphs', '/graphs'],
+      [PagePanels, 'Panels', '/panels'],
+      [PageTheming, 'Theming', '/theming'],
     ].map(preparePage),
   },
   {
-    name: 'Providers',
+    name: 'Contributing',
     pages: [
-      [PageInfo, 'How to contribute', '/how-to-contribute'],
-      [PageRedraw, 'Join the comunity', '/join-the-comunity'],
+      [PageHowToContribute, 'How to contribute', '/how-to-contribute'],
+      [PageJoinTheCommunity, 'Join the comunity', '/join-the-comunity'],
     ].map(preparePage),
   },
 ]
 
 export const PAGES = [
-  preparePage([PageHome, 'Aragon UI', '/']),
+  preparePage([PagePrinciples, 'Aragon UI', '/']),
   ...PAGE_GROUPS.reduce((pages, group) => pages.concat(group.pages), []),
 ]
