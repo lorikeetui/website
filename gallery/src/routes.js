@@ -40,7 +40,11 @@ export const PAGE_GROUPS = [
       [PagePrinciples, 'Principles', '/principles'],
       [PageBuildingBlocks, 'Building blocks', '/building-blocks'],
       [PageDealingWithLatency, 'Dealing with latency', '/dealing-with-latency'],
-      [PageSigningTransactions, 'Signing transactions', '/signing-transactions'],
+      [
+        PageSigningTransactions,
+        'Signing transactions',
+        '/signing-transactions',
+      ],
       [PageInformingUsers, 'Informing users', '/informing-users'],
       [PageMotion, 'Motion', '/motion'],
       [PageLayout, 'Layout', '/layout'],
@@ -75,6 +79,6 @@ export const PAGE_GROUPS = [
 ]
 
 export const PAGES = [
-  preparePage([PagePrinciples, 'Aragon UI', '/']),
+  preparePage([PagePrinciples, 'Lorikeet - Docs', '/']),
   ...PAGE_GROUPS.reduce((pages, group) => pages.concat(group.pages), []),
 ]

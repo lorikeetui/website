@@ -45,7 +45,7 @@ class Sidebar extends React.PureComponent {
 }
 
 const Main = styled.div`
-  width: 200px;
+  width: 232px;
   flex-shrink: 0;
 `
 
