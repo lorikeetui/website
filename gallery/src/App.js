@@ -3,6 +3,7 @@ import createHistory from 'history/createBrowserHistory'
 import styled, { injectGlobal } from 'styled-components'
 import { AragonApp } from '@aragon/ui'
 import Sidebar from 'comps/Sidebar/Sidebar'
+import Navbar from 'comps/Navbar/Navbar'
 import initGlobalStyles from './global-styles'
 import { PAGE_GROUPS, PAGES } from './routes'
 
@@ -22,6 +23,7 @@ const Content = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
+  padding-top: 64px;
 `
 
 class App extends React.Component {
@@ -57,8 +59,10 @@ class App extends React.Component {
   render() {
     const { pages, activePage } = this.state
     const Page = activePage && activePage.comp
+
     return (
       <AragonApp publicUrl={ARAGON_UI_PATH} supportLegacyAgents>
+        <Navbar />
         <Main>
           <Menu>
             <Sidebar

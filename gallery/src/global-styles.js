@@ -8,6 +8,7 @@ const globalStyles = `
       ${theme.mainBgGradientStart},
       ${theme.mainBgGradientEnd}
     );
+    -webkit-font-smoothing: antialiased;
   }
   code[class*='language-'],
   pre[class*='language-'] {

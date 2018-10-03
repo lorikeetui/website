@@ -6,9 +6,9 @@ const StyledMenuItem = styled.li`
   position: relative;
   margin: 10px 0;
   list-style: none;
-  font-size: 18px;
-  line-height: 24px;
-  font-weight: ${({ active }) => (active ? '600' : '400')};
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: ${({ active }) => (active ? '900' : '300')};
   &:before {
     display: ${({ active }) => (active ? 'block' : 'none')};
     content: 'I';

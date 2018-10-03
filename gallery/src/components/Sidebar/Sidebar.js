@@ -13,32 +13,27 @@ class Sidebar extends React.PureComponent {
     return (
       <Main>
         <StyledSidebar>
-          <Title>
-            <a href={root} onClick={this.handleHomeClick}>
-              {title}
-            </a>
-          </Title>
           <nav>
             <ul>
               {groups.map(({ name, pages }) => (
                 <li key={name}>
-                  <GroupName>
-                    <Text smallcaps color={theme.textSecondary}>
-                      {name}
-                    </Text>
-                  </GroupName>
-                  <ul>
-                    {pages
-                      .map((page, i) => (
-                        <MenuItem
-                          key={page.path}
-                          active={page === activePage}
-                          path={page.path}
-                          name={page.name}
-                          onOpen={onOpen}
-                        />
-                      ))}
-                  </ul>
+                  <SidebarTitle smallcaps color={theme.textSecondary}>
+                    {name}
+                  </SidebarTitle>
+                  <GroupLinks>
+                    <ul>
+                      {pages
+                        .map((page, i) => (
+                          <MenuItem
+                            key={page.path}
+                            active={page === activePage}
+                            path={page.path}
+                            name={page.name}
+                            onOpen={onOpen}
+                          />
+                        ))}
+                    </ul>
+                  </GroupLinks>
                 </li>
               ))}
             </ul>
@@ -58,6 +53,7 @@ const StyledSidebar = styled.section`
   overflow-y: auto;
   height: 100vh;
   padding: 40px;
+  padding-top: 104px;
   li {
     list-style: none;
   }
@@ -73,8 +69,12 @@ const Title = styled.h1`
   }
 `
 
-const GroupName = styled.h2`
-  margin-top: 30px;
+const GroupLinks = styled.h2`
+  margin-bottom: 30px;
+`
+
+const SidebarTitle = styled(Text)`
+  font-weight: 600;
 `
 
 export default Sidebar

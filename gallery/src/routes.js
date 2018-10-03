@@ -10,8 +10,6 @@ import PageButton from './pages/PageButton'
 import PageDropDown from './pages/PageDropDown'
 import PageContextMenu from './pages/PageContextMenu'
 import PageRadioButton from './pages/PageRadioButton'
-import PageRadioGroup from './pages/PageRadioGroup'
-import PageRadioList from './pages/PageRadioList'
 import PageTextInput from './pages/PageTextInput'
 import PageField from './pages/PageField'
 import PageSafeLink from './pages/PageSafeLink'
@@ -46,57 +44,41 @@ const preparePage = ([comp, name, path]) => ({
 
 export const PAGE_GROUPS = [
   {
-    name: 'Styles',
+    name: 'Design Guidelines',
     pages: [
-      [PageColors, 'Colors', '/colors'],
-      [PageTheme, 'Theme', '/theme'],
-      [PageText, 'Text', '/text'],
-      [PageIcons, 'Icons', '/icons'],
+      [PageColors, 'Principles', '/principles'],
+      [PageText, 'Building blocks', '/building-blocks'],
+      [PageIcons, 'Dealing with latency', '/dealing-with-latency'],
+      [PageAragonApp, 'Signing transactions', '/signing-transactions'],
+      [PageAppBar, 'Informing users', '/informing-users'],
+      [PageNavigationBar, 'Motion', '/motion'],
+      [PageAppView, 'Layout', '/layout'],
+      [PageBadge, 'Typografy', '/typografy'],
+      [PageCountdown, 'Accessibility', '/accessibility'],
     ].map(preparePage),
   },
   {
-    name: 'Controls',
+    name: 'Reference',
     pages: [
-      [PageButton, 'Button', '/button'],
-      [PageDropDown, 'DropDown', '/drop-down'],
-      [PageContextMenu, 'ContextMenu', '/context-menu'],
-      [PageRadioGroup, 'RadioGroup', '/radio-group'],
-      [PageRadioList, 'RadioList', '/radio-list'],
-      [PageRadioButton, 'RadioButton', '/radio-button'],
-      [PageTextInput, 'TextInput', '/text-input'],
+      [PageButton, 'Buttons', '/buttons'],
+      [PageDropDown, 'Drop down', '/drop-down'],
+      [PageContextMenu, 'Context menu', '/context-menu'],
+      [PageRadioButton, 'Radio buttons', '/radio-buttons'],
+      [PageTextInput, 'Text input', '/text-input'],
       [PageField, 'Field', '/field'],
-      [PageSafeLink, 'SafeLink', '/safe-link'],
-      [PageSlider, 'Slider', '/slider'],
-    ].map(preparePage),
-  },
-  {
-    name: 'Containers',
-    pages: [
-      [PageAragonApp, 'AragonApp', '/aragon-app'],
-      [PageAppBar, 'AppBar', '/app-bar'],
-      [PageNavigationBar, 'NavigationBar', '/navigation-bar'],
-      [PageAppView, 'AppView', '/app-view'],
-      [PageSidePanel, 'SidePanel', '/side-panel'],
-      [PageCard, 'Card', '/card'],
-      [PageEmptyStateCard, 'EmptyStateCard', '/empty-state-card'],
+      [PageSafeLink, 'Links', '/link'],
+      [PageCard, 'Cards', '/cards'],
       [PageTable, 'Table', '/table'],
-    ].map(preparePage),
-  },
-  {
-    name: 'Components',
-    pages: [
-      [PageBadge, 'Badge', '/badge'],
-      [PageCircleGraph, 'CircleGraph', '/circle-graph'],
-      [PageCountdown, 'Countdown', '/countdown'],
-      [PageInfo, 'Info', '/info'],
+      [PageCircleGraph, 'Graphs', '/graphs'],
+      [PageSidePanel, 'Panels', '/panels'],
+      [PageTheme, 'Theming', '/theming'],
     ].map(preparePage),
   },
   {
     name: 'Providers',
     pages: [
-      [PageRedraw, 'Redraw', '/redraw'],
-      [PageRedrawFromDate, 'RedrawFromDate', '/redraw-from-date'],
-      [PageObserve, 'Observe', '/observe'],
+      [PageInfo, 'How to contribute', '/how-to-contribute'],
+      [PageRedraw, 'Join the comunity', '/join-the-comunity'],
     ].map(preparePage),
   },
 ]
