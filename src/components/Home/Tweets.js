@@ -5,18 +5,17 @@ import { Tweet } from 'react-twitter-widgets'
 const ProjectsBox = styled.div`
   width: 100vw;
   height: auto;
+  min-height: 100vh;
   background: #F7FBFD;
   padding: 50px 10% 100px 10%;
+  padding: calc(50px + 12vh) 10% 100px 10%;
+  clip-path: polygon(0 12vh, 100% 0, 100% calc(100% - 6vw), 0 100%);
 `
 
 const Container = styled.div`
   margin: 20px auto;
   display: flex;
   flex-wrap: wrap;
-`
-const Box = styled.div`
-  width: 33%;
-  padding: 10px;
 `
 
 const TwitterBox = styled.div`

@@ -4,12 +4,12 @@ import { Link } from 'react-static'
 import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
-import { Spring } from 'react-spring'
+import { Spring, animated } from 'react-spring'
 
-const LorikeetNavbar = styled.div`
+const LorikeetNavbar = styled(animated.div)`
   width: 100%;
   height: 64px;
-  background: rgba(255, 255, 255, 0);
+  background: rgb(255, 255, 255);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -64,7 +64,7 @@ class Navbar extends React.Component {
   }
   renderIn = ({ x, menuItems, path }) => {
     return(
-      <LorikeetNavbar style={{background: `rgba(255, 255, 255, ${x._value})`}}>
+      <LorikeetNavbar style={{background: x.interpolate(v => `rgba(255, 255, 255, ${v})`)}}>
         <End>
           <BreakPoint from="medium">
             <ul>

@@ -3,14 +3,16 @@ import styled from 'styled-components'
 import { Page } from '../components'
 import Hero from '../components/Home/Hero'
 import About from '../components/Home/About'
-import Projects from '../components/Home/Projects'
+import Examples from '../components/Home/Examples'
 import Tweets from '../components/Home/Tweets'
+import Contributions from '../components/Home/Contributions'
 
 const Home = () => (
   <Page path="/">
     <Hero />
-    <Projects />
+    <Examples />
     <Tweets />
+    <Contributions />
   </Page>
 )
 

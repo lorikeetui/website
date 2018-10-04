@@ -13,6 +13,9 @@ const Content = styled.div`
     letter-spacing: 0.58px;
     text-align: center;
   }
+  a {
+    outline: none;
+  }
 `
 
 const menuItems = [

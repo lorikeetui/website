@@ -20,10 +20,8 @@ const Box = styled.div`
 const Projects = () => (
   <ProjectsBox>
     <div>
-      <h2>Fully open-source, used by projects like:</h2>
-      <Container>
-        
-      </Container>
+      <h2>View examples</h2>
+      <Container />
     </div>
   </ProjectsBox>
 )
