@@ -6,6 +6,7 @@ import About from '../components/Home/About'
 import Examples from '../components/Home/Examples'
 import Tweets from '../components/Home/Tweets'
 import Contributions from '../components/Home/Contributions'
+import Footer from '../components/Home/Footer'
 
 const Home = () => (
   <Page path="/">
@@ -13,6 +14,7 @@ const Home = () => (
     <Examples />
     <Tweets />
     <Contributions />
+    <Footer />
   </Page>
 )
 

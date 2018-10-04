@@ -6,7 +6,7 @@ import { Button } from '@aragon/ui'
 const ProjectsBox = styled.div`
   width: 100vw;
   height: auto;
-  padding: 50px 15% 100px 15%;
+  padding: 66px 15% 100px 15%;
 `
 
 const Container = styled.div`
