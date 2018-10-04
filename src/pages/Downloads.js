@@ -8,22 +8,18 @@ const Container = styled.div`
   width: 100%;
   margin: 0;
   padding: 50px 8.5%;
-  background: white;
+  background: #F7FBFD;
   text-align: left;
+  min-height: 100vh;
 `;
 
-const NotFound = () => (
-  <Page path="/not-found">
+const Downloads = () => (
+  <Page path="/downloads">
   	<Section>
   		<Container>
-		    <Text>
-          <h1>Page not found</h1>
-		    </Text>
-		    <br/>
-		    <p>The page you are trying to access could not be found.</p>
 		  </Container>
     </Section>
   </Page>
 );
 
-export default NotFound
+export default Downloads

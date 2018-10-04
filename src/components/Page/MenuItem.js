@@ -4,8 +4,8 @@ import styled from 'styled-components'
 import { theme, SafeLink } from '@aragon/ui'
 
 const MenuItem = ({ url, label, active, renderLink }) => (
-  <StyledMenuItem>
-    <span className={active ? 'active' : undefined}>{renderLink({ url, children: label})}</span>
+  <StyledMenuItem className={active ? 'active' : undefined}>
+    <span>{renderLink({ url, children: label})}</span>
   </StyledMenuItem>
 )
 
@@ -18,7 +18,6 @@ const StyledMenuItem = styled.li`
     align-items: center;
     padding: 0 15px;
     font-size: 15px;
-    color: ${({ active }) => (active ? theme.positiveText : theme.textSecondary)};
   }
   a {
     text-decoration: none;
@@ -32,8 +31,8 @@ const StyledMenuItem = styled.li`
       color: #32325D;
     }
   }
-  .active a {
-    span {
+  &.active {
+    span a span {
       color: #32325D;
       font-weight: 800;
       border-bottom: solid 1px #32325D;
