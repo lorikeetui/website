@@ -8,7 +8,6 @@ import Projects from '../components/Home/Projects'
 const Home = () => (
   <Page path="/">
     <Hero />
-    <About />
     <Projects />
   </Page>
 )

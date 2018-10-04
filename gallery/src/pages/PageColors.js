@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { colors, brand } from '@aragon/ui'
 import Page from 'comps/Page/Page'
 import ColorGroup from 'comps/ColorGroup/ColorGroup'
+import DosAndDonts from '../components/DosAndDonts/DosAndDonts.js'
 
 const PageButton = ({ title }) => (
   <Page title={title}>
@@ -35,6 +36,8 @@ const PageButton = ({ title }) => (
       colors={brand}
       compact
     />
+    <DosAndDonts doContent="content" doTitle="Leave enough padding around the icon, keep the line width 1px." dontContent="dont content" dontTitle="Don’t take up the whole 22px, or make your line width too fat.">
+    </DosAndDonts>
   </Page>
 )
 

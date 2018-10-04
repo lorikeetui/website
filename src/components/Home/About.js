@@ -4,10 +4,7 @@ import styled from 'styled-components'
 const AboutBox = styled.div`
   width: 100vw;
   height: auto;
-  background-color: #f7fbfd;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
   padding: calc(100px + 6vh) 20% calc(100px + 6vh) 20%;
-  margin-top: -10vh;
 `
 
 const Subtitle = styled.p`

@@ -60,7 +60,7 @@ class Navbar extends React.Component {
           <img src={Logo} />
         </SafeLink>
         <End>
-          <BreakPoint from="large">
+          <BreakPoint from="medium">
             <ul>
               {menuItems.map((item, i) => (
                 <MenuItem
@@ -73,7 +73,7 @@ class Navbar extends React.Component {
               ))}
             </ul>
           </BreakPoint>
-          <BreakPoint to="large">
+          <BreakPoint to="medium">
             <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
           </BreakPoint>
         </End>

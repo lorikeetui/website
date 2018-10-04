@@ -1,33 +1,75 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Button, SidePanel, SafeLink } from '@aragon/ui'
+import { Button, SafeLink } from '@aragon/ui'
+import Menu from './assets/menu.svg'
+import SidePanel from './SidePanel'
+import Sidebar from '../Sidebar/Sidebar'
+import { PAGE_GROUPS, PAGES } from '../../routes'
+import createHistory from 'history/createBrowserHistory'
+import initGlobalStyles from '../../global-styles'
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
+  overflow: auto;
   a {
-    padding: 10px 30px;
+    padding: 10px 0px;
     text-decoration: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  section {
+    padding: 5px !important;
   }
 `;
 
 class Panel extends React.Component {
   state = {
     opened: false,
+    pages: PAGES,
+    activePage: null,
   };
+
+  componentDidMount() {
+    this.history = createHistory()
+    this.unlistenHistory = this.history.listen(this.handleLocationUpdate)
+    this.handleLocationUpdate(this.history.location, true)
+    initGlobalStyles()
+  }
+
+  componentWillUnmount() {
+    this.unlistenHistory()
+  }
+
+  handleOpenPage = page => {
+    this.setState({ opened: false })
+    this.history.push(page, {})
+  }
+
+  handleLocationUpdate = location => {
+    const { pages } = this.state
+    const page = pages.find(page => page.path === location.pathname)
+    if (page) {
+      this.setState({ activePage: page })
+    }
+  }
+
   render() {
     const { items } = this.props;
-    const { opened } = this.state;
+    const { pages, activePage, opened } = this.state
+    const Page = activePage && activePage.comp
     return (
       <div>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
-          close
+          <img src={Menu}/>
         </Button>
         <SidePanel title="" opened={opened} onClose={() => this.setState({ opened: false })}>
           <Container>
-          <SafeLink to="localhost:3000">Home</SafeLink>
           {items.map((item, i) => (
             item[0].startsWith('/') ? (
               <SafeLink href={item[0]} key={i}>{item[1]}</SafeLink>
@@ -37,6 +79,13 @@ class Panel extends React.Component {
               </SafeLink>
             )
           ))}
+          <Sidebar
+            title={pages[0].name}
+            root={pages[0].path}
+            groups={PAGE_GROUPS}
+            activePage={activePage}
+            onOpen={this.handleOpenPage}
+          />
           </Container>
         </SidePanel>
       </div>

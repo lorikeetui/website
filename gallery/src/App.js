@@ -1,7 +1,7 @@
 import React from 'react'
 import createHistory from 'history/createBrowserHistory'
 import styled, { injectGlobal } from 'styled-components'
-import { AragonApp } from '@aragon/ui'
+import { AragonApp, breakpoint, BreakPoint } from '@aragon/ui'
 import Sidebar from 'comps/Sidebar/Sidebar'
 import Navbar from 'comps/Navbar/Navbar'
 import initGlobalStyles from './global-styles'
@@ -64,15 +64,17 @@ class App extends React.Component {
       <AragonApp publicUrl={ARAGON_UI_PATH} supportLegacyAgents>
         <Navbar />
         <Main>
-          <Menu>
-            <Sidebar
-              title={pages[0].name}
-              root={pages[0].path}
-              groups={PAGE_GROUPS}
-              activePage={activePage}
-              onOpen={this.handleOpenPage}
-            />
-          </Menu>
+          <BreakPoint from="medium">
+            <Menu>
+              <Sidebar
+                title={pages[0].name}
+                root={pages[0].path}
+                groups={PAGE_GROUPS}
+                activePage={activePage}
+                onOpen={this.handleOpenPage}
+              />
+            </Menu>
+          </BreakPoint>
           <Content>{Page && <Page title={activePage.name} />}</Content>
         </Main>
       </AragonApp>
