@@ -1,7 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
-import { Card } from '@aragon/ui'
+import { Card, breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css);
+const large = css => breakpoint('large', css);
 
 class DosAndDonts extends React.Component {
   render() {
@@ -9,12 +11,12 @@ class DosAndDonts extends React.Component {
     return (
       <Container>
         <OuterContainer>
-          <CardContainer height="282px">{doContent}</CardContainer>
+          <CardContainer>{doContent}</CardContainer>
           <CardName>Do:</CardName>
           <p>{doTitle}</p>
         </OuterContainer>
         <OuterContainer>
-          <CardContainer dont height="282px">
+          <CardContainer dont>
             {dontContent}
           </CardContainer>
           <CardName dont>Dont:</CardName>
@@ -28,6 +30,9 @@ class DosAndDonts extends React.Component {
 const Container = styled.div`
   display: flex;
   margin: 0 -30px;
+  flex-direction: column;
+  align-items: center;
+  ${medium('flex-direction: row;')};
 `
 
 const OuterContainer = styled.div`
@@ -47,6 +52,9 @@ const CardContainer = styled(Card)`
   align-items: center;
   justify-content: center;
   border-bottom: solid 10px;
+  height: 220px;
+  width: 220px;
+  ${large('height: 282px; width: 282px;')};
   ${({ dont }) => (dont ? 'border-bottom-color: #FB7372;' : 'border-bottom-color: #4edda4;')};
 `
 
