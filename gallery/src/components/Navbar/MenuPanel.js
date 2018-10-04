@@ -59,7 +59,7 @@ class Panel extends React.Component {
 
   handleOpenPage = page => {
     this.setState({ opened: false })
-    this.history.push(page, {})
+    this.props.onOpen(page)
   }
 
   handleLocationUpdate = location => {

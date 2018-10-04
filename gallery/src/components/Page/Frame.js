@@ -38,7 +38,9 @@ class Frame extends React.Component {
       }
       return
     }
-
+    if (!this.node) {
+      return
+    }
     const { body } = this.node.contentDocument
     if (!body) {
       return
@@ -59,7 +61,7 @@ class Frame extends React.Component {
   }
 
   handleLoad = event => {
-    if (this.state.root) {
+    if (this.state.root || !this.node) {
       return
     }
     const { documentElement: root, body, head } = this.node.contentDocument

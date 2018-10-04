@@ -54,6 +54,7 @@ const renderMenuItemLink = ({ url, children }) =>
 
 class Navbar extends React.Component {
   render() {
+    const { onOpen } = this.props;
     const menuItems = [
       ['/', 'Overview'],
       ['/docs', 'Docs', true],
@@ -81,7 +82,7 @@ class Navbar extends React.Component {
             </ul>
           </BreakPoint>
           <BreakPoint to="medium">
-            <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
+            <MenuPanel items={menuItems} renderLink={renderMenuItemLink} onOpen={onOpen}/>
           </BreakPoint>
         </End>
       </LorikeetNav>
