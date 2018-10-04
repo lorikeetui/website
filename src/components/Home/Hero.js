@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import About from './About.js'
-import background from './assets/hero-background.jpg'
+import image from './assets/hero-image.svg'
 import logo from './assets/logo.svg'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css);
@@ -14,11 +14,19 @@ const OuterContainer = styled.div`
 
 const HeroBox = styled.div`
   width: 100vw;
-  height: 500px;
+  min-height: 500px;
+  height: auto;
   position: relative;
   z-index: 1;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  ${medium('flex-direction: row; justify-content: space-between;')};
+
+  width: 80%;
+  margin: auto;
+  padding: 150px 0;
 `
 
 const Title = styled.h1`
@@ -26,14 +34,11 @@ const Title = styled.h1`
   font-size: 20px;
   color: #5e8fbf;
   letter-spacing: 0.6px;
-  margin-left: 12%;
   max-width: 80%;
-  ${medium('margin-left: 15%; font-size: 33px; max-width: 550px;')};
+  ${medium('font-size: 33px; max-width: 550px;')};
 `
 
 const Logo = styled.img`
-  margin-left: 12%;
-  ${medium('margin-left: 15%;')};
   max-width: 75%;
 `
 
@@ -44,6 +49,7 @@ const Hero = () => (
         <Logo src={logo} />
         <Title>An open-source design system for the decentralized web</Title>
       </div>
+      <img src={image}/>
     </HeroBox>
     <About/>
   </OuterContainer>

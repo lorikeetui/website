@@ -4,7 +4,7 @@ import styled from 'styled-components'
 const AboutBox = styled.div`
   width: 100vw;
   height: auto;
-  padding: calc(100px + 6vh) 20% calc(100px + 6vh) 20%;
+  padding: 0 20% calc(100px + 6vh) 20%;
 `
 
 const Subtitle = styled.p`
@@ -56,24 +56,24 @@ const About = () => (
           <p>Pick what you want to use without bloating your codebase</p>
         </Box>
         <Box>
-          <h3>Modular component library</h3>
-          <p>Pick what you want to use without bloating your codebase</p>
+          <h3>Decentralized UX patterns</h3>
+          <p>Establishing user-centric UX patterns for decentralized apps</p>
         </Box>
         <Box>
-          <h3>Modular component library</h3>
-          <p>Pick what you want to use without bloating your codebase</p>
+          <h3>Performant react components</h3>
+          <p>Hand optimized performance, high code quality React components</p>
         </Box>
         <Box>
-          <h3>Modular component library</h3>
-          <p>Pick what you want to use without bloating your codebase</p>
+          <h3>Smooth motion & animations</h3>
+          <p>Best practices motion design for interactions and transitions</p>
         </Box>
         <Box>
-          <h3>Modular component library</h3>
-          <p>Pick what you want to use without bloating your codebase</p>
+          <h3>Easily extensible</h3>
+          <p>Build your own components to extend functionality</p>
         </Box>
         <Box>
-          <h3>Modular component library</h3>
-          <p>Pick what you want to use without bloating your codebase</p>
+          <h3>Clean UI design</h3>
+          <p>Clean UI design that is easily themable for your app and brand</p>
         </Box>
       </Container>
     </div>
