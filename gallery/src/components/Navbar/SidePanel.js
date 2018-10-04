@@ -3,6 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { Spring, animated } from 'react-spring'
 import { Text } from '@aragon/ui'
+import logo from './assets/lorikeet-logo.svg'
+import close from './assets/close.svg'
 
 
 const PANEL_WIDTH = 280
@@ -56,11 +58,11 @@ class SidePanel extends React.PureComponent {
         >
           <PanelHeader>
             <h1>
-              <Text size="xxlarge">{title}</Text>
+              <LogoImg src={logo} />
             </h1>
             {!blocking && (
               <PanelCloseButton type="button" onClick={this.handleClose}>
-                <p>close</p>
+                <img src={close} />
               </PanelCloseButton>
             )}
           </PanelHeader>
@@ -169,6 +171,10 @@ const PanelCloseButton = styled.button`
     }
   }
 `
+
+const LogoImg = styled.img`
+  margin: 0 0 20px 0;
+`;
 
 SidePanel.PANEL_WIDTH = PANEL_WIDTH
 SidePanel.PANEL_OUTER_WIDTH = PANEL_OUTER_WIDTH

@@ -4,6 +4,7 @@ import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
 import Logo from './assets/lorikeet-logo.svg'
+const medium = css => breakpoint('medium', css);
 
 const LorikeetNav = styled.div`
   width: 100%;
@@ -14,13 +15,17 @@ const LorikeetNav = styled.div`
   padding: 0 20px;
   position: fixed;
   z-index: 5;
-  background: rgb(248, 251, 253, 0.9);
+  background: rgb(248, 251, 253, 1);
+  ${medium('background: rgb(248, 251, 253, 0.9);')};
   backdrop-filter: blur(3px);
   .brand {
     display: flex;
   }
   .brand img {
     height: 25px;
+  }
+  a {
+    outline: none;
   }
 `;
 
@@ -56,9 +61,11 @@ class Navbar extends React.Component {
     ];
     return (
       <LorikeetNav id="navbar">
-        <SafeLink href="">
-          <img src={Logo} />
-        </SafeLink>
+        <BreakPoint from="medium">
+          <SafeLink href="">
+            <img src={Logo} />
+          </SafeLink>
+        </BreakPoint>
         <End>
           <BreakPoint from="medium">
             <ul>

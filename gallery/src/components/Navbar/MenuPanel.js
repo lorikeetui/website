@@ -8,6 +8,7 @@ import Sidebar from '../Sidebar/Sidebar'
 import { PAGE_GROUPS, PAGES } from '../../routes'
 import createHistory from 'history/createBrowserHistory'
 import initGlobalStyles from '../../global-styles'
+import Logo from './assets/lorikeet-logo.svg'
 
 const Container = styled.div`
   display: flex;
@@ -15,7 +16,6 @@ const Container = styled.div`
   align-items: flex-start;
   overflow: auto;
   a {
-    padding: 10px 0px;
     text-decoration: none;
   }
   ul {
@@ -25,8 +25,19 @@ const Container = styled.div`
   }
   section {
     padding: 5px !important;
+    height: auto;
   }
 `;
+
+const NavbarLink = styled(SafeLink)`
+  color: #4A90E2;
+  padding: 10px 0px;
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+  }
+`
 
 class Panel extends React.Component {
   state = {
@@ -70,22 +81,22 @@ class Panel extends React.Component {
         </Button>
         <SidePanel title="" opened={opened} onClose={() => this.setState({ opened: false })}>
           <Container>
-          {items.map((item, i) => (
-            item[0].startsWith('/') ? (
-              <SafeLink href={item[0]} key={i}>{item[1]}</SafeLink>
-            ) : (
-              <SafeLink href={item[0]} key={i} target="_blank">
-                {item[1]}
-              </SafeLink>
-            )
-          ))}
-          <Sidebar
-            title={pages[0].name}
-            root={pages[0].path}
-            groups={PAGE_GROUPS}
-            activePage={activePage}
-            onOpen={this.handleOpenPage}
-          />
+            {items.map((item, i) => (
+              item[0].startsWith('/') ? (
+                <NavbarLink href={item[0]} key={i}>{item[1]}</NavbarLink>
+              ) : (
+                <NavbarLink href={item[0]} key={i} target="_blank">
+                  {item[1]}
+                </NavbarLink>
+              )
+            ))}
+            <Sidebar
+              title={pages[0].name}
+              root={pages[0].path}
+              groups={PAGE_GROUPS}
+              activePage={activePage}
+              onOpen={this.handleOpenPage}
+            />
           </Container>
         </SidePanel>
       </div>
