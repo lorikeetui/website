@@ -25,6 +25,7 @@ const Container = styled.div`
 const Box = styled.div`
   width: 33%;
   padding: 10px;
+  cursor: default;
   h3 {
     font-weight: 700;
     font-size: 15px;
@@ -37,6 +38,11 @@ const Box = styled.div`
     font-size: 15px;
     color: #535f80;
     line-height: 28px;
+  }
+  &:hover {
+    p, h3 {
+      color: #5E8FBF;
+    }
   }
 `
 
