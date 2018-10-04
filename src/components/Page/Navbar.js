@@ -49,7 +49,7 @@ const renderMenuItemLink = ({ url, children }) =>
 class Navbar extends React.Component {
   state = {
     scroll: 0,
-  };
+  }
   componentDidMount() {
     window.addEventListener('scroll', this.onScroll)
   }
@@ -59,24 +59,26 @@ class Navbar extends React.Component {
   }
 
   onScroll = event => {
-    const scroll = (document.scrollingElement.scrollTop*2)/1000;
+    const scroll = (document.scrollingElement.scrollTop * 2) / 1000
     this.setState({ scroll: scroll })
   }
   renderIn = ({ x, menuItems, path }) => {
-    return(
-      <LorikeetNavbar style={{background: x.interpolate(v => `rgba(255, 255, 255, ${v})`)}}>
+    return (
+      <LorikeetNavbar
+        style={{ background: x.interpolate(v => `rgba(255, 255, 255, ${v})`) }}
+      >
         <End>
           <BreakPoint from="medium">
             <ul>
               {menuItems.map((item, i) => (
                 <div>
-                <MenuItem
-                  key={i}
-                  url={item[0]}
-                  label={item[1]}
-                  active={item[2]}
-                  renderLink={renderMenuItemLink}
-                />
+                  <MenuItem
+                    key={i}
+                    url={item[0]}
+                    label={item[1]}
+                    active={item[2]}
+                    renderLink={renderMenuItemLink}
+                  />
                 </div>
               ))}
             </ul>
@@ -100,7 +102,6 @@ class Navbar extends React.Component {
       >
         {this.renderIn}
       </Spring>
-
     )
   }
 }

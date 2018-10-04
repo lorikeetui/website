@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contributors from './Contributors'
-import { Button } from '@aragon/ui'
+import { Button, breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
 
 const ProjectsBox = styled.div`
   width: 100vw;
@@ -47,7 +48,8 @@ const StyledBlackButton = styled(Button)`
   letter-spacing: 0.26px;
   text-transform: uppercase;
   padding: 5px 30px;
-  margin: 0 20px;
+  ${medium('margin: 0 20px;')};
+  margin: 10px 20px;
 `
 
 const StyledBLueButton = styled(Button)`
@@ -59,7 +61,8 @@ const StyledBLueButton = styled(Button)`
   letter-spacing: 0.26px;
   text-transform: uppercase;
   padding: 5px 30px;
-  margin: 0 20px;
+  ${medium('margin: 0 20px;')};
+  margin: 10px 20px;
 `
 
 const Projects = () => (

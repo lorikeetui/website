@@ -12,32 +12,39 @@ const Container = styled.div`
     padding: 10px 30px;
     text-decoration: none;
   }
-`;
+`
 
 class Panel extends React.Component {
   state = {
     opened: false,
-  };
+  }
   render() {
-    const { items } = this.props;
-    const { opened } = this.state;
+    const { items } = this.props
+    const { opened } = this.state
     return (
       <div>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
           open
         </Button>
-        <SidePanel title="" opened={opened} onClose={() => this.setState({ opened: false })}>
+        <SidePanel
+          title=""
+          opened={opened}
+          onClose={() => this.setState({ opened: false })}
+        >
           <Container>
-          <Link to="/">Home</Link>
-          {items.map((item, i) => (
-            item[0].startsWith('/') ? (
-              <Link to={item[0]} key={i}>{item[1]}</Link>
-            ) : (
-              <SafeLink href={item[0]} key={i} target="_blank">
-                {item[1]}
-              </SafeLink>
-            )
-          ))}
+            <Link to="/">Home</Link>
+            {items.map(
+              (item, i) =>
+                item[0].startsWith('/') ? (
+                  <Link to={item[0]} key={i}>
+                    {item[1]}
+                  </Link>
+                ) : (
+                  <SafeLink href={item[0]} key={i} target="_blank">
+                    {item[1]}
+                  </SafeLink>
+                )
+            )}
           </Container>
         </SidePanel>
       </div>

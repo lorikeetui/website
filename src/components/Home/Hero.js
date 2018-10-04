@@ -4,12 +4,16 @@ import About from './About.js'
 import image from './assets/hero-image.svg'
 import logo from './assets/logo.svg'
 import { breakpoint } from '@aragon/ui'
-const medium = css => breakpoint('medium', css);
-
+const medium = css => breakpoint('medium', css)
 
 const OuterContainer = styled.div`
   padding-top: 64px;
-  background-image: linear-gradient(-179deg, #BAE2F0 0%, #F5FCFF 49%, #F7FBFD 97%);
+  background-image: linear-gradient(
+    -179deg,
+    #bae2f0 0%,
+    #f5fcff 49%,
+    #f7fbfd 97%
+  );
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 `
 
@@ -50,9 +54,9 @@ const Hero = () => (
         <Logo src={logo} />
         <Title>An open-source design system for the decentralized web</Title>
       </div>
-      <img src={image}/>
+      <img src={image} />
     </HeroBox>
-    <About/>
+    <About />
   </OuterContainer>
 )
 

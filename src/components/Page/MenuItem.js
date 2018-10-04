@@ -5,7 +5,7 @@ import { theme, SafeLink } from '@aragon/ui'
 
 const MenuItem = ({ url, label, active, renderLink }) => (
   <StyledMenuItem className={active ? 'active' : undefined}>
-    <span>{renderLink({ url, children: label})}</span>
+    <span>{renderLink({ url, children: label })}</span>
   </StyledMenuItem>
 )
 
@@ -28,29 +28,28 @@ const StyledMenuItem = styled.li`
       padding: 7px 0;
     }
     span:hover {
-      color: #32325D;
+      color: #32325d;
     }
   }
   &.active {
     span a span {
-      color: #32325D;
+      color: #32325d;
       font-weight: 800;
-      border-bottom: solid 1px #32325D;
-
+      border-bottom: solid 1px #32325d;
     }
   }
-`;
+`
 
 MenuItem.propTypes = {
   url: PropTypes.string,
   label: PropTypes.string,
   active: PropTypes.bool,
   renderLink: PropTypes.func,
-};
+}
 
 MenuItem.defaultProps = {
   active: false,
   renderLink: ({ url, children }) => <SafeLink href={url}>{children}</SafeLink>,
-};
+}
 
 export default MenuItem

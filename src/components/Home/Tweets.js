@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tweet } from 'react-twitter-widgets'
+import { breakpoint } from '@aragon/ui'
+const large = css => breakpoint('large', css);
+const medium = css => breakpoint('medium', css);
 
 const ProjectsBox = styled.div`
   width: 100vw;
@@ -19,7 +22,9 @@ const Container = styled.div`
 `
 
 const TwitterBox = styled.div`
-  width: 33%;
+  width: 100%;
+  ${medium('width: 50%;')};
+  ${large('width: 33%;')};
   padding: 10px;
 `
 

@@ -10,20 +10,20 @@ const Container = styled.div`
   padding: 50px 8.5%;
   background: white;
   text-align: left;
-`;
+`
 
 const NotFound = () => (
   <Page path="/not-found">
-  	<Section>
-  		<Container>
-		    <Text>
+    <Section>
+      <Container>
+        <Text>
           <h1>Page not found</h1>
-		    </Text>
-		    <br/>
-		    <p>The page you are trying to access could not be found.</p>
-		  </Container>
+        </Text>
+        <br />
+        <p>The page you are trying to access could not be found.</p>
+      </Container>
     </Section>
   </Page>
-);
+)
 
 export default NotFound

@@ -21,13 +21,13 @@ const Content = styled.div`
 const menuItems = [
   ['/', 'Overview'],
   ['/docs', 'Docs'],
-  ['/downloads', 'Downloads']
+  ['/downloads', 'Downloads'],
 ]
 
 class Page extends React.Component {
   render() {
     const { children, path } = this.props
-    const items = menuItems.map(item => [...item, item[0] === path]);
+    const items = menuItems.map(item => [...item, item[0] === path])
     return (
       <SiteData
         render={({ title: siteTitle }) => (

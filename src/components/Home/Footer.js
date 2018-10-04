@@ -9,10 +9,6 @@ const FooterBox = styled.div`
   padding: 50px 20% 100px 20%;
 `
 
-const Footer = () => (
-  <FooterBox>
-
-  </FooterBox>
-)
+const Footer = () => <FooterBox />
 
 export default Footer
