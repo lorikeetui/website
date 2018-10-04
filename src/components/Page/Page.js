@@ -6,7 +6,6 @@ import Navbar from './Navbar'
 const medium = css => breakpoint('medium', css)
 
 const Content = styled.div`
-  padding-top: 64px;
   min-height: calc(100vh - 116px) !important;
   h2 {
     font-size: 32px;
@@ -16,13 +15,16 @@ const Content = styled.div`
   }
 `
 
-const menuItems = [['/', 'home']]
+const menuItems = [
+  ['/', 'Overview'],
+  ['/docs', 'Docs'],
+  ['/downloads', 'Downloads']
+]
 
 class Page extends React.Component {
   render() {
     const { children, path } = this.props
     const items = menuItems.map(item => [...item, item[0] === path])
-
     return (
       <SiteData
         render={({ title: siteTitle }) => (

@@ -20,6 +20,26 @@ const StyledMenuItem = styled.li`
     font-size: 15px;
     color: ${({ active }) => (active ? theme.positiveText : theme.textSecondary)};
   }
+  a {
+    text-decoration: none;
+    padding: 0 10px;
+    span {
+      color: ${theme.textSecondary};
+      font-size: 17px;
+      padding: 7px 0;
+    }
+    span:hover {
+      color: #32325D;
+    }
+  }
+  .active a {
+    span {
+      color: #32325D;
+      font-weight: 800;
+      border-bottom: solid 1px #32325D;
+
+    }
+  }
 `;
 
 MenuItem.propTypes = {

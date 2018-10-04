@@ -8,6 +8,7 @@ const medium = css => breakpoint('medium', css);
 
 
 const OuterContainer = styled.div`
+  padding-top: 64px;
   background-image: linear-gradient(-179deg, #BAE2F0 0%, #F5FCFF 49%, #F7FBFD 97%);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%);
 `

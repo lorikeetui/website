@@ -28,6 +28,18 @@ export default {
 
     },
     {
+      path: '/docs',
+      component: 'src/pages/Home',
+      getData: () => ({ title: 'Lorikeet - docs' }),
+
+    },
+    {
+      path: '/downloads',
+      component: 'src/pages/Home',
+      getData: () => ({ title: 'Lorikeet - downloads' }),
+
+    },
+    {
       is404: true,
       component: 'src/pages/NotFound',
       getData: () => ({ title: 'Lorikeet - Page Not Found' }),
