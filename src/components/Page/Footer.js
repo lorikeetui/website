@@ -1,12 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from './assets/footer-logo.svg'
+import powered from './assets/powered-by-aragon.svg'
 
 const Footer = () => (
   <FooterBox>
     <Container>
       <Box>
         <Logo src={logo} />
+        <Powered src={powered} />
       </Box>
       <LinkBox>
         <Title>Resources</Title>
@@ -63,6 +65,12 @@ const Title = styled.h3`
 const Logo = styled.img`
   margin-top: -19px;
   max-width: 170px;
+`
+
+const Powered = styled.img`
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `
 
 const Box = styled.div`
