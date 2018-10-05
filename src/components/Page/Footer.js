@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from './assets/footer-logo.svg'
 import powered from './assets/powered-by-aragon.svg'
+import { breakpoint } from '@aragon/ui'
+const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Footer = () => (
   <FooterBox>
@@ -73,14 +76,19 @@ const Powered = styled.img`
   left: 0;
 `
 
-const Box = styled.div`
-  width: 33%;
+const LinkBox = styled.div`
+  width: 50%;
   position: relative;
+  margin-top: 66px;
+  margin-bottom: 50px;
+  ${medium('width: 33%; margin-top: 0; margin-bottom: 0;')};
 `
 
-const LinkBox = styled.div`
-  width: 33%;
-  position: relative;
+const Box = styled.div`
+  width: 100%;
+  position: absolute;
+  height: 350px;
+  ${medium('position: relative; width: 33%; height: 189px;')};
 `
 
 export default Footer

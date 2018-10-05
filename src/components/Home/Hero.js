@@ -5,6 +5,7 @@ import image from './assets/hero-image.svg'
 import logo from './assets/logo.svg'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
+const large = css => breakpoint('large', css)
 
 const Hero = () => (
   <OuterContainer>
@@ -13,7 +14,7 @@ const Hero = () => (
         <Logo src={logo} />
         <Title>An open-source design system for the decentralized web</Title>
       </div>
-      <img src={image} />
+      <Image src={image} />
     </HeroBox>
     <About />
   </OuterContainer>
@@ -42,8 +43,7 @@ const HeroBox = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  ${medium('flex-direction: row; justify-content: space-between;')};
-
+  ${large('flex-direction: row; justify-content: space-between;')};
   width: 80%;
   margin: auto;
   padding: 150px 0;
@@ -61,6 +61,9 @@ const Title = styled.h1`
 const Logo = styled.img`
   max-width: 75%;
   margin-bottom: 20px;
+`
+const Image = styled.img`
+  max-width: 100%;
 `
 
 export default Hero
