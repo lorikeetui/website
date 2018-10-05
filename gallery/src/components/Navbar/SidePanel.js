@@ -6,7 +6,6 @@ import { Text } from '@aragon/ui'
 import logo from './assets/lorikeet-logo.svg'
 import close from './assets/close.svg'
 
-
 const PANEL_WIDTH = 280
 const CONTENT_PADDING = 26
 const PANEL_EXTRA_PADDING = PANEL_WIDTH * 0.2 //70
@@ -37,7 +36,7 @@ class SidePanel extends React.PureComponent {
     const { children, title, opened, blocking } = this.props
 
     // When hiding the panel, add 40px more for the shadow
-    const panelLeft = opened ?  -PANEL_EXTRA_PADDING : -PANEL_OUTER_WIDTH - 40
+    const panelLeft = opened ? -PANEL_EXTRA_PADDING : -PANEL_OUTER_WIDTH - 40
 
     return (
       <Main opened={opened}>
@@ -52,7 +51,7 @@ class SidePanel extends React.PureComponent {
           style={{
             left: `${panelLeft}px`,
             transform: progress.interpolate(
-              t => `translate3d(${(Number(opened) * t) + 40 }px, 0, 0)`
+              t => `translate3d(${Number(opened) * t + 40}px, 0, 0)`
             ),
           }}
         >
@@ -174,7 +173,7 @@ const PanelCloseButton = styled.button`
 
 const LogoImg = styled.img`
   margin: 0 0 20px 0;
-`;
+`
 
 SidePanel.PANEL_WIDTH = PANEL_WIDTH
 SidePanel.PANEL_OUTER_WIDTH = PANEL_OUTER_WIDTH

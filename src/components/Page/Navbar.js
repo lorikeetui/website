@@ -71,9 +71,8 @@ class Navbar extends React.Component {
           <BreakPoint from="medium">
             <ul>
               {menuItems.map((item, i) => (
-                <div>
+                <div key={i}>
                   <MenuItem
-                    key={i}
                     url={item[0]}
                     label={item[1]}
                     active={item[2]}

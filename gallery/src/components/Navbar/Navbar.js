@@ -4,7 +4,7 @@ import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
 import Logo from './assets/lorikeet-logo.svg'
-const medium = css => breakpoint('medium', css);
+const medium = css => breakpoint('medium', css)
 
 const LorikeetNav = styled.div`
   width: 100%;
@@ -27,7 +27,7 @@ const LorikeetNav = styled.div`
   a {
     outline: none;
   }
-`;
+`
 
 const End = styled.div`
   width: auto;
@@ -41,25 +41,27 @@ const End = styled.div`
   button {
     margin: 0 0 0 10px;
   }
-`;
+`
 
 const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
-    <SafeLink href={url}><Text size="xlarge">{children}</Text></SafeLink>
+    <SafeLink href={url}>
+      <Text size="xlarge">{children}</Text>
+    </SafeLink>
   ) : (
     <SafeLink href={url} target="_blank">
       <Text size="xlarge">{children}</Text>
     </SafeLink>
-  );
+  )
 
 class Navbar extends React.Component {
   render() {
-    const { onOpen } = this.props;
+    const { onOpen } = this.props
     const menuItems = [
       ['/', 'Overview'],
       ['/docs', 'Docs', true],
       ['/downloads', 'Downloads'],
-    ];
+    ]
     return (
       <LorikeetNav id="navbar">
         <BreakPoint from="medium">
@@ -82,7 +84,11 @@ class Navbar extends React.Component {
             </ul>
           </BreakPoint>
           <BreakPoint to="medium">
-            <MenuPanel items={menuItems} renderLink={renderMenuItemLink} onOpen={onOpen}/>
+            <MenuPanel
+              items={menuItems}
+              renderLink={renderMenuItemLink}
+              onOpen={onOpen}
+            />
           </BreakPoint>
         </End>
       </LorikeetNav>

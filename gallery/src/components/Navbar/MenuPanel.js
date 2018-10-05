@@ -27,10 +27,10 @@ const Container = styled.div`
     padding: 5px !important;
     height: auto;
   }
-`;
+`
 
 const NavbarLink = styled(SafeLink)`
-  color: #4A90E2;
+  color: #4a90e2;
   padding: 10px 0px;
   text-decoration: none;
 
@@ -44,7 +44,7 @@ class Panel extends React.Component {
     opened: false,
     pages: PAGES,
     activePage: null,
-  };
+  }
 
   componentDidMount() {
     this.history = createHistory()
@@ -71,25 +71,32 @@ class Panel extends React.Component {
   }
 
   render() {
-    const { items } = this.props;
+    const { items } = this.props
     const { pages, activePage, opened } = this.state
     const Page = activePage && activePage.comp
     return (
       <div>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
-          <img src={Menu}/>
+          <img src={Menu} />
         </Button>
-        <SidePanel title="" opened={opened} onClose={() => this.setState({ opened: false })}>
+        <SidePanel
+          title=""
+          opened={opened}
+          onClose={() => this.setState({ opened: false })}
+        >
           <Container>
-            {items.map((item, i) => (
-              item[0].startsWith('/') ? (
-                <NavbarLink href={item[0]} key={i}>{item[1]}</NavbarLink>
-              ) : (
-                <NavbarLink href={item[0]} key={i} target="_blank">
-                  {item[1]}
-                </NavbarLink>
-              )
-            ))}
+            {items.map(
+              (item, i) =>
+                item[0].startsWith('/') ? (
+                  <NavbarLink href={item[0]} key={i}>
+                    {item[1]}
+                  </NavbarLink>
+                ) : (
+                  <NavbarLink href={item[0]} key={i} target="_blank">
+                    {item[1]}
+                  </NavbarLink>
+                )
+            )}
             <Sidebar
               title={pages[0].name}
               root={pages[0].path}
