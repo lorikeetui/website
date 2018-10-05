@@ -58,6 +58,7 @@ const TwitterBox = styled.div`
 const OuterContainer = styled.div`
   max-width: 1200px;
   margin: auto;
+  min-height: 900px;
 `
 
 export default Projects

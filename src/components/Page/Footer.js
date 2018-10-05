@@ -21,7 +21,7 @@ const Footer = () => (
         <a>Downloads</a>
       </LinkBox>
       <LinkBox>
-        <Title>Chnnels</Title>
+        <Title>Channels</Title>
         <a>Github</a>
         <a>Twitter</a>
         <a>Matrix</a>

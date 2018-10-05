@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-static'
 import { Button, SidePanel, SafeLink } from '@aragon/ui'
+import menu from './assets/menu.svg'
 
 class Panel extends React.Component {
   static propTypes = {
@@ -18,7 +19,7 @@ class Panel extends React.Component {
     return (
       <div>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
-          open
+          <img src={menu} />
         </Button>
         <SidePanel
           title=""
@@ -26,7 +27,6 @@ class Panel extends React.Component {
           onClose={() => this.setState({ opened: false })}
         >
           <Container>
-            <Link to="/">Home</Link>
             {items.map(
               (item, i) =>
                 item[0].startsWith('/') ? (

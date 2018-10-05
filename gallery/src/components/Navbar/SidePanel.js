@@ -6,12 +6,6 @@ import { Text } from '@aragon/ui'
 import logo from './assets/lorikeet-logo.svg'
 import close from './assets/close.svg'
 
-const PANEL_WIDTH = 280
-const CONTENT_PADDING = 26
-const PANEL_EXTRA_PADDING = PANEL_WIDTH * 0.2 //70
-const PANEL_OUTER_WIDTH = PANEL_WIDTH + PANEL_EXTRA_PADDING //420
-const PANEL_INNER_WIDTH = PANEL_WIDTH - CONTENT_PADDING * 2
-
 class SidePanel extends React.PureComponent {
   componentDidMount() {
     document.addEventListener('keydown', this.handleEscape, false)
@@ -32,56 +26,46 @@ class SidePanel extends React.PureComponent {
   handleTransitionRest = () => {
     this.props.onTransitionEnd(this.props.opened)
   }
-  renderIn = ({ progress }) => {
-    const { children, title, opened, blocking } = this.props
 
-    // When hiding the panel, add 40px more for the shadow
-    const panelLeft = opened ? -PANEL_EXTRA_PADDING : -PANEL_OUTER_WIDTH - 40
-
-    return (
-      <Main opened={opened}>
-        <Overlay
-          style={{
-            opacity: progress,
-            pointerEvents: opened ? 'auto' : 'none',
-          }}
-          onClick={this.handleClose}
-        />
-        <Panel
-          style={{
-            left: `${panelLeft}px`,
-            transform: progress.interpolate(
-              t => `translate3d(${Number(opened) * t + 40}px, 0, 0)`
-            ),
-          }}
-        >
-          <PanelHeader>
-            <h1>
-              <LogoImg src={logo} />
-            </h1>
-            {!blocking && (
-              <PanelCloseButton type="button" onClick={this.handleClose}>
-                <img src={close} />
-              </PanelCloseButton>
-            )}
-          </PanelHeader>
-          <PanelScrollView>
-            <PanelContent>{children}</PanelContent>
-          </PanelScrollView>
-        </Panel>
-      </Main>
-    )
-  }
   render() {
-    const { opened } = this.props
+    const { opened, children } = this.props
     return (
       <Spring
         config={{ tension: 50, friction: 10 }}
-        to={{ progress: Number(opened) }}
+        to={{ progress: Number(!opened), overlay: Number(opened) }}
         onRest={this.handleTransitionRest}
         native
       >
-        {this.renderIn}
+        {({ progress, overlay }) => (
+          <Main opened={opened}>
+            <Overlay
+              style={{
+                opacity: overlay,
+                pointerEvents: opened ? 'auto' : 'none',
+              }}
+              onClick={this.handleClose}
+            />
+            <Panel
+              style={{
+                transform: progress.interpolate(
+                  t => `translate3d(${-t * 290}px, 0, 0)`
+                ),
+              }}
+            >
+              <PanelHeader>
+                <h1>
+                  <LogoImg src={logo} />
+                </h1>
+                <PanelCloseButton type="button" onClick={this.handleClose}>
+                  <img src={close} />
+                </PanelCloseButton>
+              </PanelHeader>
+              <PanelScrollView>
+                <PanelContent>{children}</PanelContent>
+              </PanelScrollView>
+            </Panel>
+          </Main>
+        )}
       </Spring>
     )
   }
@@ -128,7 +112,7 @@ const Panel = styled(animated.aside)`
   left: 0;
   display: flex;
   flex-direction: column;
-  width: ${PANEL_WIDTH + PANEL_EXTRA_PADDING}px;
+  width: 280px;
   height: 100vh;
   padding-left: 10px;
   background: white;
@@ -138,7 +122,7 @@ const Panel = styled(animated.aside)`
 const PanelHeader = styled.header`
   position: relative;
   padding-top: 15px;
-  padding-left: ${CONTENT_PADDING}px;
+  padding-left: 26px;
   padding-right: 20px;
   padding-bottom: 15px;
   flex-shrink: 0;
@@ -150,9 +134,7 @@ const PanelScrollView = styled.div`
 `
 
 const PanelContent = styled.div`
-  padding-right: ${CONTENT_PADDING}px;
-  padding-left: ${CONTENT_PADDING}px;
-  padding-bottom: ${CONTENT_PADDING}px;
+  padding: 0 26px 26px;
 `
 
 const PanelCloseButton = styled.button`
@@ -174,15 +156,5 @@ const PanelCloseButton = styled.button`
 const LogoImg = styled.img`
   margin: 0 0 20px 0;
 `
-
-SidePanel.PANEL_WIDTH = PANEL_WIDTH
-SidePanel.PANEL_OUTER_WIDTH = PANEL_OUTER_WIDTH
-SidePanel.PANEL_EXTRA_PADDING = PANEL_EXTRA_PADDING
-SidePanel.PANEL_INNER_WIDTH = PANEL_INNER_WIDTH
-SidePanel.HORIZONTAL_PADDING = CONTENT_PADDING
-
-// legacy
-SidePanel.PANEL_OVERFLOW = PANEL_EXTRA_PADDING
-SidePanel.PANEL_HIDE_RIGHT = -PANEL_OUTER_WIDTH
 
 export default SidePanel
