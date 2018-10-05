@@ -6,7 +6,7 @@ const medium = css => breakpoint('medium', css)
 
 const Projects = () => (
   <ProjectsBox>
-    <div>
+    <OuterContainer>
       <h2>Open source contributions</h2>
       <Container>
         <Subtitle>
@@ -21,9 +21,14 @@ const Projects = () => (
           <StyledBLueButton>Check the docs</StyledBLueButton>
         </ButtonsBox>
       </Container>
-    </div>
+    </OuterContainer>
   </ProjectsBox>
 )
+
+const OuterContainer = styled.div`
+  max-width: 1200px;
+  margin: auto;
+`
 
 const ProjectsBox = styled.div`
   width: 100vw;

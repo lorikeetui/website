@@ -5,6 +5,34 @@ import { breakpoint } from '@aragon/ui'
 const large = css => breakpoint('large', css);
 const medium = css => breakpoint('medium', css);
 
+const Projects = () => (
+  <ProjectsBox>
+    <OuterContainer>
+      <h2>What people are saying</h2>
+      <Container>
+        <TwitterBox>
+          <Tweet tweetId="1045037331923767297" />
+        </TwitterBox>
+        <TwitterBox>
+          <Tweet tweetId="1044624201179553792" />
+        </TwitterBox>
+        <TwitterBox>
+          <Tweet tweetId="1045798807630278656" />
+        </TwitterBox>
+        <TwitterBox>
+          <Tweet tweetId="1047140552137949185" />
+        </TwitterBox>
+        <TwitterBox>
+          <Tweet tweetId="1047131473575337991" />
+        </TwitterBox>
+        <TwitterBox>
+          <Tweet tweetId="1046537615091134464" />
+        </TwitterBox>
+      </Container>
+    </OuterContainer>
+  </ProjectsBox>
+)
+
 const ProjectsBox = styled.div`
   width: 100vw;
   height: auto;
@@ -27,33 +55,9 @@ const TwitterBox = styled.div`
   ${large('width: 33%;')};
   padding: 10px;
 `
-
-const Projects = () => (
-  <ProjectsBox>
-    <div>
-      <h2>What people are saying</h2>
-      <Container>
-        <TwitterBox>
-          <Tweet tweetId="1045037331923767297" />
-        </TwitterBox>
-        <TwitterBox>
-          <Tweet tweetId="1044624201179553792" />
-        </TwitterBox>
-        <TwitterBox>
-          <Tweet tweetId="1045798807630278656" />
-        </TwitterBox>
-        <TwitterBox>
-          <Tweet tweetId="1047140552137949185" />
-        </TwitterBox>
-        <TwitterBox>
-          <Tweet tweetId="1047131473575337991" />
-        </TwitterBox>
-        <TwitterBox>
-          <Tweet tweetId="1046537615091134464" />
-        </TwitterBox>
-      </Container>
-    </div>
-  </ProjectsBox>
-)
+const OuterContainer = styled.div`
+  max-width: 1200px;
+  margin: auto;
+`
 
 export default Projects

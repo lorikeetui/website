@@ -6,7 +6,7 @@ const medium = css => breakpoint('medium', css)
 
 const About = () => (
   <AboutBox>
-    <div>
+    <OuterContainer>
       <h2>Build great decentralized user experiences</h2>
       <Subtitle>
         Lorikeet is a design system with React components, UI/UX guidelines and
@@ -40,9 +40,14 @@ const About = () => (
           <p>Clean UI design that is easily themable for your app and brand</p>
         </Box>
       </Container>
-    </div>
+    </OuterContainer>
   </AboutBox>
 )
+
+const OuterContainer = styled.div`
+  max-width: 1200px;
+  margin: auto;
+`
 
 const AboutBox = styled.div`
   width: 100vw;

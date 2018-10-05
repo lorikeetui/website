@@ -32,6 +32,8 @@ const OuterContainer = styled.div`
 
 const HeroBox = styled.div`
   width: 100vw;
+  max-width: 1200px;
+  margin: auto;
   min-height: 500px;
   height: auto;
   position: relative;
@@ -58,6 +60,7 @@ const Title = styled.h1`
 
 const Logo = styled.img`
   max-width: 75%;
+  margin-bottom: 20px;
 `
 
 export default Hero
