@@ -4,17 +4,11 @@ import styled from 'styled-components'
 import { Link } from 'react-static'
 import { Button, SidePanel, SafeLink } from '@aragon/ui'
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  a {
-    padding: 10px 30px;
-    text-decoration: none;
-  }
-`
-
 class Panel extends React.Component {
+  static propTypes = {
+    items: PropTypes.array,
+  }
+
   state = {
     opened: false,
   }
@@ -52,8 +46,14 @@ class Panel extends React.Component {
   }
 }
 
-Panel.propTypes = {
-  items: PropTypes.array,
-}
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  a {
+    padding: 10px 30px;
+    text-decoration: none;
+  }
+`
 
 export default Panel

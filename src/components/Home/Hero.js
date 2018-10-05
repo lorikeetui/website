@@ -6,6 +6,19 @@ import logo from './assets/logo.svg'
 import { breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
+const Hero = () => (
+  <OuterContainer>
+    <HeroBox>
+      <div>
+        <Logo src={logo} />
+        <Title>An open-source design system for the decentralized web</Title>
+      </div>
+      <img src={image} />
+    </HeroBox>
+    <About />
+  </OuterContainer>
+)
+
 const OuterContainer = styled.div`
   padding-top: 64px;
   background-image: linear-gradient(
@@ -46,18 +59,5 @@ const Title = styled.h1`
 const Logo = styled.img`
   max-width: 75%;
 `
-
-const Hero = () => (
-  <OuterContainer>
-    <HeroBox>
-      <div>
-        <Logo src={logo} />
-        <Title>An open-source design system for the decentralized web</Title>
-      </div>
-      <img src={image} />
-    </HeroBox>
-    <About />
-  </OuterContainer>
-)
 
 export default Hero

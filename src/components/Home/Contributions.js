@@ -4,6 +4,27 @@ import Contributors from './Contributors'
 import { Button, breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
+const Projects = () => (
+  <ProjectsBox>
+    <div>
+      <h2>Open source contributions</h2>
+      <Container>
+        <Subtitle>
+          Lorikeet is licensed with MIT License. Maintained by <a>@bpierre</a>{' '}
+          and <a>@dharmaone</a> and backed by <a>@AragonProject</a>, it is a
+          community project with many amazing contributors from around the
+          world. Thank you to everyone, and a warm welcome to new contributors
+        </Subtitle>
+        <Contributors />
+        <ButtonsBox>
+          <StyledBlackButton>View on github</StyledBlackButton>
+          <StyledBLueButton>Check the docs</StyledBLueButton>
+        </ButtonsBox>
+      </Container>
+    </div>
+  </ProjectsBox>
+)
+
 const ProjectsBox = styled.div`
   width: 100vw;
   height: auto;
@@ -64,26 +85,5 @@ const StyledBLueButton = styled(Button)`
   ${medium('margin: 0 20px;')};
   margin: 10px 20px;
 `
-
-const Projects = () => (
-  <ProjectsBox>
-    <div>
-      <h2>Open source contributions</h2>
-      <Container>
-        <Subtitle>
-          Lorikeet is licensed with MIT License. Maintained by <a>@bpierre</a>{' '}
-          and <a>@dharmaone</a> and backed by <a>@AragonProject</a>, it is a
-          community project with many amazing contributors from around the
-          world. Thank you to everyone, and a warm welcome to new contributors
-        </Subtitle>
-        <Contributors />
-        <ButtonsBox>
-          <StyledBlackButton>View on github</StyledBlackButton>
-          <StyledBLueButton>Check the docs</StyledBLueButton>
-        </ButtonsBox>
-      </Container>
-    </div>
-  </ProjectsBox>
-)
 
 export default Projects

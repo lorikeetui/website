@@ -4,53 +4,6 @@ import { breakpoint } from '@aragon/ui'
 const large = css => breakpoint('large', css)
 const medium = css => breakpoint('medium', css)
 
-const AboutBox = styled.div`
-  width: 100vw;
-  height: auto;
-  padding: 0 20% calc(100px + 6vh) 20%;
-`
-
-const Subtitle = styled.p`
-  font-weight: 300;
-  font-size: 22px;
-  color: #424770;
-  letter-spacing: 0;
-  text-align: center;
-  line-height: 27px;
-  margin: 20px 0 50px 0;
-`
-
-const Container = styled.div`
-  margin: 20px auto;
-  display: flex;
-  flex-wrap: wrap;
-`
-const Box = styled.div`
-  width: 100%;
-  ${medium('width: 50%;')};
-  ${large('width: 33%;')};
-  padding: 10px;
-  cursor: default;
-  h3 {
-    font-weight: 700;
-    font-size: 15px;
-    color: #32325d;
-    letter-spacing: 0.3px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-  }
-  p {
-    font-size: 15px;
-    color: #535f80;
-    line-height: 28px;
-  }
-  &:hover {
-    p, h3 {
-      color: #5E8FBF;
-    }
-  }
-`
-
 const About = () => (
   <AboutBox>
     <div>
@@ -90,5 +43,53 @@ const About = () => (
     </div>
   </AboutBox>
 )
+
+const AboutBox = styled.div`
+  width: 100vw;
+  height: auto;
+  padding: 0 20% calc(100px + 6vh) 20%;
+`
+
+const Subtitle = styled.p`
+  font-weight: 300;
+  font-size: 22px;
+  color: #424770;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 27px;
+  margin: 20px 0 50px 0;
+`
+
+const Container = styled.div`
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -35px;
+`
+const Box = styled.div`
+  width: 100%;
+  ${medium('width: 50%;')};
+  ${large('width: 33%;')};
+  padding: 20px;
+  cursor: default;
+  h3 {
+    font-weight: 700;
+    font-size: 15px;
+    color: #32325d;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 15px;
+    color: #535f80;
+    line-height: 28px;
+  }
+  &:hover {
+    p, h3 {
+      color: #5E8FBF;
+    }
+  }
+`
 
 export default About

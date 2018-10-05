@@ -4,10 +4,6 @@ import styled from 'styled-components'
 import { theme, breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 
-const StyledContent = styled.div`
-  width: 100vw;
-`
-
 const Section = ({ className, ...props }) => {
   const containerProps = { className }
 
@@ -19,6 +15,10 @@ const Section = ({ className, ...props }) => {
     </section>
   )
 }
+
+const StyledContent = styled.div`
+  width: 100vw;
+`
 
 Section.propTypes = {
   className: PropTypes.string,

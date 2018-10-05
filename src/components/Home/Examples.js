@@ -1,6 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Projects = () => (
+  <ProjectsBox>
+    <div>
+      <h2>View examples</h2>
+      <Container />
+    </div>
+  </ProjectsBox>
+)
+
 const ProjectsBox = styled.div`
   width: 100vw;
   height: auto;
@@ -16,14 +25,5 @@ const Box = styled.div`
   width: 33%;
   padding: 10px;
 `
-
-const Projects = () => (
-  <ProjectsBox>
-    <div>
-      <h2>View examples</h2>
-      <Container />
-    </div>
-  </ProjectsBox>
-)
 
 export default Projects

@@ -5,25 +5,6 @@ import { AragonApp, AppBar, breakpoint } from '@aragon/ui'
 import Navbar from './Navbar'
 const medium = css => breakpoint('medium', css)
 
-const Content = styled.div`
-  min-height: calc(100vh - 116px) !important;
-  h2 {
-    font-size: 32px;
-    color: #5e8fbf;
-    letter-spacing: 0.58px;
-    text-align: center;
-  }
-  a {
-    outline: none;
-  }
-`
-
-const menuItems = [
-  ['/', 'Overview'],
-  ['/docs', 'Docs'],
-  ['/downloads', 'Downloads'],
-]
-
 class Page extends React.Component {
   render() {
     const { children, path } = this.props
@@ -47,5 +28,24 @@ class Page extends React.Component {
     )
   }
 }
+
+const Content = styled.div`
+  min-height: calc(100vh - 116px) !important;
+  h2 {
+    font-size: 32px;
+    color: #5e8fbf;
+    letter-spacing: 0.58px;
+    text-align: center;
+  }
+  a {
+    outline: none;
+  }
+`
+
+const menuItems = [
+  ['/', 'Overview'],
+  ['/docs', 'Docs'],
+  ['/downloads', 'Downloads'],
+]
 
 export default Page

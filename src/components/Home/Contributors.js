@@ -19,18 +19,6 @@ import image16 from './assets/GithubContributions/16.png'
 import image17 from './assets/GithubContributions/17.png'
 import image18 from './assets/GithubContributions/18.png'
 
-const Container = styled.a`
-  margin: 20px auto;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-`
-const Image = styled.img`
-  margin: 5px 10px;
-`
-
 const Projects = () => (
   <Container href="https://github.com/lorikeetui" target="_blank">
     <Image src={image1} />
@@ -53,5 +41,17 @@ const Projects = () => (
     <Image src={image18} />
   </Container>
 )
+
+const Container = styled.a`
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+const Image = styled.img`
+  margin: 5px 10px;
+`
 
 export default Projects

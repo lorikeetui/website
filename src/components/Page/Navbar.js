@@ -6,35 +6,6 @@ import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
 import { Spring, animated } from 'react-spring'
 
-const LorikeetNavbar = styled(animated.div)`
-  width: 100%;
-  height: 64px;
-  background: rgb(255, 255, 255);
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px;
-  position: fixed;
-  z-index: 5;
-  .brand {
-    display: flex;
-  }
-`
-
-const End = styled.div`
-  width: auto;
-  height: auto;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  ul {
-    display: flex;
-  }
-  button {
-    margin: 0 0 0 10px;
-  }
-`
-
 const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
     <Link to={url}>
@@ -104,5 +75,34 @@ class Navbar extends React.Component {
     )
   }
 }
+
+const LorikeetNavbar = styled(animated.div)`
+  width: 100%;
+  height: 64px;
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  z-index: 5;
+  .brand {
+    display: flex;
+  }
+`
+
+const End = styled.div`
+  width: auto;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  ul {
+    display: flex;
+  }
+  button {
+    margin: 0 0 0 10px;
+  }
+`
 
 export default Navbar

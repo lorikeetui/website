@@ -4,14 +4,6 @@ import { Text } from '@aragon/ui'
 import styled from 'styled-components'
 import Section from '../components/Page/Section'
 
-const Container = styled.div`
-  width: 100%;
-  margin: 0;
-  padding: 50px 8.5%;
-  background: white;
-  text-align: left;
-`
-
 const NotFound = () => (
   <Page path="/not-found">
     <Section>
@@ -25,5 +17,13 @@ const NotFound = () => (
     </Section>
   </Page>
 )
+
+const Container = styled.div`
+  width: 100%;
+  margin: 0;
+  padding: 50px 8.5%;
+  background: white;
+  text-align: left;
+`
 
 export default NotFound

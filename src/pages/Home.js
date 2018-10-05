@@ -6,7 +6,7 @@ import About from '../components/Home/About'
 import Examples from '../components/Home/Examples'
 import Tweets from '../components/Home/Tweets'
 import Contributions from '../components/Home/Contributions'
-import Footer from '../components/Home/Footer'
+import Footer from '../components/Page/Footer'
 
 const Home = () => (
   <Page path="/">
