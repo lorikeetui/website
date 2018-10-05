@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { BreakPoint } from '@aragon/ui'
 import renderReadme from 'src/render-readme'
 import MarkdownContent from './MarkdownContent'
 import Frame from './Frame'
@@ -72,7 +73,9 @@ class Page extends React.Component {
 
     return (
       <StyledPage>
-        <h1>{title}</h1>
+        <BreakPoint from="medium">
+          <h1>{title}</h1>
+        </BreakPoint>
         {loading && <p>Loading…</p>}
         {!readme || intro ? content : null}
       </StyledPage>

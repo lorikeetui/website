@@ -27,6 +27,12 @@ const LorikeetNav = styled.div`
   a {
     outline: none;
   }
+  h1 {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #000;
+  }
 `
 
 const End = styled.div`
@@ -39,7 +45,7 @@ const End = styled.div`
     display: flex;
   }
   button {
-    margin: 0 0 0 10px;
+    margin: 0 15px 0 0
   }
 `
 
@@ -56,12 +62,13 @@ const renderMenuItemLink = ({ url, children }) =>
 
 class Navbar extends React.Component {
   render() {
-    const { onOpen } = this.props
+    const { onOpen, title } = this.props
     const menuItems = [
       ['/', 'Overview'],
       ['/docs', 'Docs', true],
       ['/downloads', 'Downloads'],
     ]
+
     return (
       <LorikeetNav id="navbar">
         <BreakPoint from="medium">
@@ -89,6 +96,7 @@ class Navbar extends React.Component {
               renderLink={renderMenuItemLink}
               onOpen={onOpen}
             />
+            <h1>{title && title.name}</h1>
           </BreakPoint>
         </End>
       </LorikeetNav>

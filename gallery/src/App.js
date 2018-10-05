@@ -62,7 +62,7 @@ class App extends React.Component {
 
     return (
       <AragonApp publicUrl={ARAGON_UI_PATH} supportLegacyAgents>
-        <Navbar onOpen={this.handleOpenPage}/>
+        <Navbar onOpen={this.handleOpenPage} title={activePage}/>
         <Main>
           <BreakPoint from="medium">
             <Menu>
