@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { breakpoint } from '@aragon/ui'
 const large = css => breakpoint('large', css)
 const medium = css => breakpoint('medium', css)
+import tick from './assets/tick.svg'
 
 const About = () => (
   <AboutBox>
@@ -16,27 +17,45 @@ const About = () => (
       </Subtitle>
       <Container>
         <Box>
-          <h3>Modular component library</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Modular component library</h3>
+          </TitleContainer>
           <p>Pick what you want to use without bloating your codebase</p>
         </Box>
         <Box>
-          <h3>Decentralized UX patterns</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Decentralized UX patterns</h3>
+          </TitleContainer>
           <p>Establishing user-centric UX patterns for decentralized apps</p>
         </Box>
         <Box>
-          <h3>Performant react components</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Performant react components</h3>
+          </TitleContainer>
           <p>Hand optimized performance, high code quality React components</p>
         </Box>
         <Box>
-          <h3>Smooth motion & animations</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Smooth motion & animations</h3>
+          </TitleContainer>
           <p>Best practices motion design for interactions and transitions</p>
         </Box>
         <Box>
-          <h3>Easily extensible</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Easily extensible</h3>
+          </TitleContainer>
           <p>Build your own components to extend functionality</p>
         </Box>
         <Box>
-          <h3>Clean UI design</h3>
+          <TitleContainer>
+            <img src={tick}/>
+            <h3>Clean UI design</h3>
+          </TitleContainer>
           <p>Clean UI design that is easily themable for your app and brand</p>
         </Box>
       </Container>
@@ -47,6 +66,15 @@ const About = () => (
 const OuterContainer = styled.div`
   max-width: 1200px;
   margin: auto;
+`
+
+const TitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  img {
+    padding-right: 7px;
+    margin-bottom: 10px;
+  }
 `
 
 const AboutBox = styled.div`
@@ -61,7 +89,7 @@ const Subtitle = styled.p`
   color: #424770;
   letter-spacing: 0;
   text-align: center;
-  line-height: 27px;
+  line-height: 36px;
   margin: 20px 0 50px 0;
 `
 
@@ -89,6 +117,7 @@ const Box = styled.div`
     font-size: 15px;
     color: #535f80;
     line-height: 28px;
+    padding-left: 35px;
   }
   &:hover {
     p, h3 {

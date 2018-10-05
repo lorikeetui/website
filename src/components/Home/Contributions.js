@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Contributors from './Contributors'
 import { Button, breakpoint } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
+import github from './assets/github.svg'
 
 const Projects = () => (
   <ProjectsBox>
@@ -17,7 +18,7 @@ const Projects = () => (
         </Subtitle>
         <Contributors />
         <ButtonsBox>
-          <StyledBlackButton>View on github</StyledBlackButton>
+          <StyledBlackButton><img src={github}/>View on github</StyledBlackButton>
           <StyledBLueButton>Check the docs</StyledBLueButton>
         </ButtonsBox>
       </Container>
@@ -70,25 +71,35 @@ const StyledBlackButton = styled(Button)`
   background: black;
   color: white;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.26px;
   text-transform: uppercase;
-  padding: 5px 30px;
+  padding: 8px 45px;
   ${medium('margin: 0 20px;')};
   margin: 10px 20px;
+  width: 235px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    margin-right: 5px;
+  }
 `
 
 const StyledBLueButton = styled(Button)`
   background-image: linear-gradient(-141deg, #6993fb 0%, #6dcbfe 100%);
   border-radius: 4px;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   color: #ffffff;
   letter-spacing: 0.26px;
   text-transform: uppercase;
-  padding: 5px 30px;
+  padding: 8px 45px;
   ${medium('margin: 0 20px;')};
   margin: 10px 20px;
+  height: 40.5px;
+  width: 235px;
+  text-align: center;
 `
 
 export default Projects
