@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="123px" height="30px" viewBox="0 0 123 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Lorikeet logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FFF500" offset="0%"></stop>
+            <stop stop-color="#FFCA17" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#FFA730" offset="0%"></stop>
+            <stop stop-color="#FF6A3C" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FF6513" offset="0%"></stop>
+            <stop stop-color="#F43FF9" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="94.0073103%" x2="50%" y2="9.92773479%" id="linearGradient-4">
+            <stop stop-color="#438EFF" offset="0%"></stop>
+            <stop stop-color="#6ACCFF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-5">
+            <stop stop-color="#3FFB55" offset="0%"></stop>
+            <stop stop-color="#BBF93F" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="guidelines" transform="translate(-32.000000, -17.000000)">
+            <g id="Lorikeet-logo" transform="translate(19.000000, 6.000000)">
+                <g id="Group-Copy-3" transform="translate(13.419000, 10.395000)" opacity="0.9">
+                    <path d="M13.4096578,13.608 C11.2738859,16.9129164 10.206,20.6113442 10.206,24.7032835 C10.206,29.6203442 11.2738859,34.9309164 13.4096578,40.635 C15.6838859,34.962054 16.821,29.688323 16.821,24.8138069 C16.821,20.679323 15.6838859,16.944054 13.4096578,13.608 Z" id="original_Path-2_67779265" fill="url(#linearGradient-1)" transform="translate(13.513500, 27.121500) rotate(-90.000000) translate(-13.513500, -27.121500) "></path>
+                    <path d="M14.3546578,9.072 C12.2188859,12.3769164 11.151,16.0753442 11.151,20.1672835 C11.151,25.0843442 12.2188859,30.3949164 14.3546578,36.099 C16.6288859,30.426054 17.766,25.152323 17.766,20.2778069 C17.766,16.143323 16.6288859,12.408054 14.3546578,9.072 Z" id="original_Path-2_67779265-Copy" fill="url(#linearGradient-2)" transform="translate(14.458500, 22.585500) rotate(-70.000000) translate(-14.458500, -22.585500) "></path>
+                    <path d="M16.4336578,5.292 C14.2978859,8.59691641 13.23,12.2953442 13.23,16.3872835 C13.23,21.3043442 14.2978859,26.6149164 16.4336578,32.319 C18.7078859,26.646054 19.845,21.372323 19.845,16.4978069 C19.845,12.363323 18.7078859,8.62805404 16.4336578,5.292 Z" id="original_Path-2_67779265-Copy-2" fill="url(#linearGradient-3)" transform="translate(16.537500, 18.805500) rotate(-51.000000) translate(-16.537500, -18.805500) "></path>
+                    <path d="M19.8356578,2.268 C17.6998859,5.57291641 16.632,9.27134424 16.632,13.3632835 C16.632,18.2803442 17.6998859,23.5909164 19.8356578,29.295 C22.1098859,23.622054 23.247,18.348323 23.247,13.4738069 C23.247,9.339323 22.1098859,5.60405404 19.8356578,2.268 Z" id="original_Path-2_67779265-Copy-3" fill="url(#linearGradient-4)" transform="translate(19.939500, 15.781500) rotate(-32.000000) translate(-19.939500, -15.781500) "></path>
+                    <path d="M23.6156578,0.567 C21.4798859,3.87191641 20.412,7.57034424 20.412,11.6622835 C20.412,16.5793442 21.4798859,21.8899164 23.6156578,27.594 C25.8898859,21.921054 27.027,16.647323 27.027,11.7728069 C27.027,7.638323 25.8898859,3.90305404 23.6156578,0.567 Z" id="original_Path-2_67779265-Copy-4" fill="url(#linearGradient-5)" transform="translate(23.719500, 14.080500) rotate(-14.000000) translate(-23.719500, -14.080500) "></path>
+                </g>
+                <text id="Lorikeet" font-family="Overpass-Bold, Overpass" font-size="22.68" font-weight="bold" fill="#1D1D1D">
+                    <tspan x="48.762" y="38.443">Lorikeet</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

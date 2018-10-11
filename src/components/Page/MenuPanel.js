@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-static'
-import { Button, SidePanel, SafeLink } from '@aragon/ui'
+import { Button, SafeLink } from '@aragon/ui'
+import SidePanel from './SidePanel'
 import menu from './assets/menu.svg'
 
 class Panel extends React.Component {
@@ -34,7 +35,7 @@ class Panel extends React.Component {
                     {item[1]}
                   </Link>
                 ) : (
-                  <SafeLink href={item[0]} key={i} target="_blank">
+                  <SafeLink href={item[0]} key={i}>
                     {item[1]}
                   </SafeLink>
                 )
@@ -49,10 +50,14 @@ class Panel extends React.Component {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: flex-start;
   a {
-    padding: 10px 30px;
+    padding: 10px 0;
     text-decoration: none;
+    color: #4a90e2;
+  }
+  a:hover {
+    color: black;
   }
 `
 

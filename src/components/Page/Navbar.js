@@ -5,6 +5,7 @@ import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
 import { Spring, animated } from 'react-spring'
+const medium = css => breakpoint('medium', css)
 
 const renderMenuItemLink = ({ url, children }) =>
   url.startsWith('/') ? (
@@ -81,7 +82,8 @@ const LorikeetNavbar = styled(animated.div)`
   height: 64px;
   background: rgb(255, 255, 255);
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  ${medium('justify-content: flex-end;')};
   align-items: center;
   padding: 0 20px;
   position: fixed;
