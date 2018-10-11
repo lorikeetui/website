@@ -12,7 +12,7 @@ const renderMenuItemLink = ({ url, children }) =>
       <Text size="xlarge">{children}</Text>
     </Link>
   ) : (
-    <SafeLink href={url} target="_blank">
+    <SafeLink href={url}>
       <Text size="xlarge">{children}</Text>
     </SafeLink>
   )

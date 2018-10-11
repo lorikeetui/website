@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import Contributors from './Contributors'
-import { Button, breakpoint } from '@aragon/ui'
+import { Button, breakpoint, SafeLink } from '@aragon/ui'
+
 const medium = css => breakpoint('medium', css)
 import github from './assets/github.svg'
 
@@ -11,14 +12,14 @@ const Projects = () => (
       <h2>Open source contributions</h2>
       <Container>
         <Subtitle>
-          Lorikeet is licensed with MIT License. Maintained by <a>@bpierre</a>{' '}
-          and <a>@dharmaone</a> and backed by <a>@AragonProject</a>, it is a
+          Lorikeet is licensed with MIT License. Maintained by <SafeLink href="https://github.com/bpierre" target="_blank">@bpierre</SafeLink>{' '}
+          and <SafeLink href="https://github.com/dharmaone" target="_blank">@dharmaone</SafeLink> and backed by <SafeLink href="https://github.com/aragon" target="_blank">@AragonProject</SafeLink>, it is a
           community project with many amazing contributors from around the
           world. Thank you to everyone, and a warm welcome to new contributors
         </Subtitle>
         <Contributors />
         <ButtonsBox>
-          <StyledBlackButton><img src={github}/>View on github</StyledBlackButton>
+          <StyledBlackButton href="https://github.com/lorikeetui/lorikeet" target="_blank"><img src={github}/>View on github</StyledBlackButton>
           <StyledBLueButton>Check the docs</StyledBLueButton>
         </ButtonsBox>
       </Container>
@@ -58,6 +59,7 @@ const Subtitle = styled.p`
   a {
     color: #67b0d7;
     cursor: pointer;
+    text-decoration: none;
   }
 `
 const ButtonsBox = styled.div`
@@ -67,7 +69,7 @@ const ButtonsBox = styled.div`
   align-items: center;
   justify-content: center;
 `
-const StyledBlackButton = styled(Button)`
+const StyledBlackButton = styled(Button.Anchor)`
   background: black;
   color: white;
   font-weight: 700;

@@ -44,7 +44,7 @@ const Content = styled.div`
 
 const menuItems = [
   ['/', 'Overview'],
-  ['/docs', 'Docs'],
+  ['https://lorikeetui.github.io/docs', 'Docs'],
   ['/downloads', 'Downloads'],
 ]
 

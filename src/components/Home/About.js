@@ -111,7 +111,7 @@ const Box = styled.div`
     color: #32325d;
     letter-spacing: 0.3px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
   p {
     font-size: 15px;

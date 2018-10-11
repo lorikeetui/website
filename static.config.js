@@ -28,12 +28,6 @@ export default {
 
     },
     {
-      path: '/docs',
-      component: 'src/pages/Home',
-      getData: () => ({ title: 'Lorikeet - Docs' }),
-
-    },
-    {
       path: '/downloads',
       component: 'src/pages/Downloads',
       getData: () => ({ title: 'Lorikeet - Downloads' }),

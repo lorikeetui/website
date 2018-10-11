@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { SafeLink } from '@aragon/ui'
 import image1 from './assets/GithubContributions/1.png'
 import image2 from './assets/GithubContributions/2.png'
 import image3 from './assets/GithubContributions/3.png'
@@ -20,7 +21,10 @@ import image17 from './assets/GithubContributions/17.png'
 import image18 from './assets/GithubContributions/18.png'
 
 const Projects = () => (
-  <Container href="https://github.com/lorikeetui" target="_blank">
+  <Container
+    href="https://github.com/lorikeetui/lorikeet/graphs/contributors"
+    target="_blank"
+  >
     <Image src={image1} />
     <Image src={image2} />
     <Image src={image3} />
@@ -42,7 +46,7 @@ const Projects = () => (
   </Container>
 )
 
-const Container = styled.a`
+const Container = styled(SafeLink)`
   margin: 20px auto;
   width: 100%;
   display: flex;

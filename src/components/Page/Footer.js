@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from './assets/footer-logo.svg'
 import powered from './assets/powered-by-aragon.svg'
-import { breakpoint } from '@aragon/ui'
+import { breakpoint, SafeLink } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
 const large = css => breakpoint('large', css)
 
@@ -11,7 +11,9 @@ const Footer = () => (
     <Container>
       <Box>
         <Logo src={logo} />
-        <Powered src={powered} />
+        <SafeLink href="https://aragon.org/" target="_blank">
+          <Powered src={powered} />
+        </SafeLink>
       </Box>
       <LinkBox>
         <Title>Resources</Title>
