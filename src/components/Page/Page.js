@@ -31,6 +31,7 @@ class Page extends React.Component {
 
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
+  background: white;
   h2 {
     font-size: 3.8rem;
     color: #5e8fbf;
