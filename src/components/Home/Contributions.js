@@ -50,7 +50,7 @@ const Box = styled.div`
 
 const Subtitle = styled.p`
   font-weight: 300;
-  font-size: 16px;
+  font-size: 1.7rem;
   color: #424770;
   letter-spacing: 0;
   text-align: center;

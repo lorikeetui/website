@@ -94,6 +94,7 @@ export default {
             <meta charSet="UTF-8" />
             <title>{title || siteTitle}</title>
             <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <script id="twitter-wjs" type="text/javascript" async defer src="//platform.twitter.com/widgets.js"></script>
             <link rel="icon" href="/favicon.ico" />
             {renderMeta.styleTags}
           </Head>

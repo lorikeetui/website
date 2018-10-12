@@ -72,8 +72,9 @@ const TitleContainer = styled.div`
   display: flex;
   align-items: center;
   img {
-    padding-right: 7px;
+    margin-right: 20px;
     margin-bottom: 10px;
+    width: 26px;
   }
 `
 
@@ -85,7 +86,7 @@ const AboutBox = styled.div`
 
 const Subtitle = styled.p`
   font-weight: 300;
-  font-size: 22px;
+  font-size: 2.4rem;
   color: #424770;
   letter-spacing: 0;
   text-align: center;
@@ -107,17 +108,17 @@ const Box = styled.div`
   cursor: default;
   h3 {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 1.7rem;
     color: #32325d;
     letter-spacing: 0.3px;
     text-transform: uppercase;
     margin-bottom: 9px;
   }
   p {
-    font-size: 15px;
+    font-size: 1.7rem;
     color: #535f80;
     line-height: 28px;
-    padding-left: 35px;
+    padding-left: 46px;
   }
   &:hover {
     p, h3 {

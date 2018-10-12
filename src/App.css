@@ -30,3 +30,23 @@ body {
 .smcx-embed > .smcx-iframe-container {
   margin: auto !important;
 }
+
+html {
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 7px;
+  }
+}
+@media (min-width: 601px) and (max-width: 992px) {
+  html {
+    font-size: 8px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px){
+  html {
+    font-size: 9px;
+  }
+}

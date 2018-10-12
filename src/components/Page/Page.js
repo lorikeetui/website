@@ -32,7 +32,7 @@ class Page extends React.Component {
 const Content = styled.div`
   min-height: calc(100vh - 116px) !important;
   h2 {
-    font-size: 32px;
+    font-size: 3.8rem;
     color: #5e8fbf;
     letter-spacing: 0.58px;
     text-align: center;

@@ -37,7 +37,7 @@ const FooterBox = styled.div`
   width: 100vw;
   height: auto;
   min-height: 300px;
-  background: #012829;
+  background: #1A1D1D;
   padding: 100px 0;
 `
 const Container = styled.div`
@@ -46,7 +46,7 @@ const Container = styled.div`
   display: flex;
   max-width: 900px;
   a {
-    font-size: 16px;
+    font-size: 1.7rem;
     color: #FFFFFF;
     line-height: 39px;
     display: block;
@@ -60,7 +60,7 @@ const Container = styled.div`
 const Title = styled.h3`
   opacity: 0.6;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1.7rem;
   color: #FFFFFF;
   letter-spacing: 0.3px;
   text-transform: uppercase;
@@ -87,7 +87,7 @@ const LinkBox = styled.div`
 `
 
 const Box = styled.div`
-  width: 100%;
+  width: auto;
   position: absolute;
   height: 350px;
   ${medium('position: relative; width: 33%; height: 189px;')};

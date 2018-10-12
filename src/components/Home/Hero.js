@@ -12,7 +12,7 @@ const Hero = () => (
     <HeroBox>
       <div>
         <Logo src={logo} />
-        <Title>An open-source design system for the decentralized web</Title>
+        <Title>A design system for the decentralized web</Title>
       </div>
       <Image src={image} />
     </HeroBox>
@@ -50,12 +50,12 @@ const HeroBox = styled.div`
 `
 
 const Title = styled.h1`
-  font-weight: 300;
+  font-weight: 400;
   font-size: 20px;
   color: #5e8fbf;
   letter-spacing: 0.6px;
   max-width: 80%;
-  ${medium('font-size: 33px; max-width: 550px;')};
+  ${medium('font-size: 46px; max-width: 550px;')};
 `
 
 const Logo = styled.img`
