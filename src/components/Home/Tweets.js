@@ -40,7 +40,8 @@ const ProjectsBox = styled.div`
   background: #F7FBFD;
   padding: 50px 10% 100px 10%;
   padding: calc(50px + 12vh) 10% 100px 10%;
-  clip-path: polygon(0 12vh, 100% 0, 100% calc(100% - 6vw), 0 100%);
+  clip-path: polygon(0 3vh,100% 0,100% calc(100% - 6vw),0 100%);
+  ${medium('clip-path: polygon(0 12vh, 100% 0, 100% calc(100% - 6vw), 0 100%);')};
 `
 
 const Container = styled.div`
