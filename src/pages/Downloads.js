@@ -6,7 +6,10 @@ import Section from '../components/Page/Section'
 import figmaSVG from './assets/figma.svg'
 import SketchSVG from './assets/sketch.svg'
 import FramerSVG from './assets/framer.svg'
-import DownloadIconSVG from './assets/downloadicon.svg'
+import { breakpoint } from '@aragon/ui'
+import DownloadLink from '../components/DownloadLink.js'
+const large = css => breakpoint('large', css)
+const medium = css => breakpoint('medium', css)
 
 const Downloads = () => (
   <Page path="/downloads">
@@ -28,18 +31,15 @@ const Downloads = () => (
   </Page>
 )
 
-const DownloadLink = (props) =>
-  <LinkWrapper>
-    <IconContainer><Icon src={props.src} /></IconContainer>
-    <DownLink href={props.href}><InsideLinkWarpper><LinkText>{props.text}</LinkText><DownloadIcon src={DownloadIconSVG}/></InsideLinkWarpper></DownLink>
-  </LinkWrapper>
-
 const H1 = styled.h1`
   font-size: 46px;
   color: #fff;
 `
 
 const Content = styled.div`
+  flex-direction: column;
+  ${medium('flex-direction: column;')};
+  ${large('flex-direction: row;')};
   display: flex;
   margin-top: 40px;
 `
@@ -58,6 +58,10 @@ const Description = styled.p`
   width: 466px;
   color: #fff;
 
+  /* p {
+    padding-bottom;
+  } */
+
 `
 
 const DownloadWrapper = styled.div`
@@ -67,46 +71,6 @@ const DownloadWrapper = styled.div`
   
 `
 
-const Icon =styled.img`
-  display: flex;
-  margin: 9px 0;
-`
-
-const DownloadIcon = styled.img`
-  width: 20px;
-  height: 20px;
-`
-
-const DownLink = styled.a`
-  display: flex;
-  text-decoration: none;
-
-`
-
-const LinkText = styled.p`
-  font-size: 17px;
-  color: #6DCBFE;
-  padding-left: 20px;
-  padding-right: 20px;
-`
-
-const LinkWrapper = styled.div`
-  display: flex;
-`
-
-const IconContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-`
-
-const InsideLinkWarpper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`
 const PageWrapper =styled.div`
   margin: 125px 134px ;
 `
