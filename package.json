@@ -17,7 +17,7 @@
     "react-dom": "^16.0.0",
     "react-google-maps": "^9.4.5",
     "react-router": "^4.2.0",
-    "react-spring": "^6.0.0",
+    "react-spring": "^5.4.4",
     "react-static": "^5.7.1",
     "react-twitter-widgets": "^1.7.1",
     "styled-components": "^3.2.5"
