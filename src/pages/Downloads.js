@@ -13,21 +13,26 @@ const medium = css => breakpoint('medium', css)
 
 const Downloads = () => (
   <Page path="/downloads">
-    <Section>
+    <DownloadsSection>
       <Container>
-        <PageWrapper>
+        <div>
           <H1>Downloads</H1>
           <Content>
-            <Description><P>Download some goodies to start designing your decentralized apps. This is an ever growing collection of components for Sketch and Figma, and interactive components for Framer X.</P><P>If you would like to contribute to designing new components, please get in touch! The best way is to open an issue on <A href={"https://github.com/lorikeetui/design/issues"}>https://github.com/lorikeetui/design/issues</A></P></Description>
+            <Description>
+              <P>Download some goodies to start designing your decentralized apps. This is an ever growing collection of components for Sketch and Figma, and interactive components for Framer X.</P>
+              <P>If you would like to contribute to designing new components, please get in touch! The best way is to open an issue on 
+                <A href={"https://github.com/lorikeetui/design/issues"}>https://github.com/lorikeetui/design/issues</A>
+              </P>
+            </Description>
             <DownloadWrapper>
               <DownloadLink src={SketchSVG} text={"Download for Sketch"} href={"#"}/>
               <DownloadLink src={figmaSVG} text={"Download for Figma"} href={"#"}/>
               <DownloadLink src={FramerSVG} text={"Download for Framer X"} href={"#"}/>
             </DownloadWrapper>
           </Content>
-        </PageWrapper>
+        </div>
       </Container>
-    </Section>
+    </DownloadsSection>
   </Page>
 )
 
@@ -51,36 +56,42 @@ const P = styled.p`
 const A = styled.a`
   color: #6DCBFE;
   text-decoration: none;
+  word-break: break-all;
 `
 
 const Description = styled.p`
   font-size: 17px;
-  width: 466px;
   color: #fff;
-
-  /* p {
-    padding-bottom;
-  } */
-
+  width: 100%;
+  ${medium('width: 70%; padding-right: 60px;')};
+  
 `
 
 const DownloadWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  margin: 0 70px;
-  
-`
-
-const PageWrapper =styled.div`
-  margin: 125px 134px ;
+  flex-direction: column; 
+  width: 100%;
+  ${medium('width: 30%')};
 `
 
 const Container = styled.div`
-  width: 100%;
+  width: 100%
+  padding: 87px 38px;
+  ${medium('width: 60%; padding: 0;')};
   margin: 0;
-  padding: 50px 8.5%;
-  background: #333B47;
   text-align: left;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  div {
+    max-width: 100%;
+  }
+
+`
+const DownloadsSection = styled(Section)`
+  background: #333B47;
   min-height: 100vh;
 `
 

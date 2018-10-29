@@ -35,8 +35,9 @@ class Navbar extends React.Component {
     this.setState({ scroll: scroll })
   }
   renderIn = ({ x, menuItems, path }) => {
+
     return (
-      <LorikeetNavbar
+      <LorikeetNavbar className={path === '/downloads' ? 'light' : ''}
         style={{ background: x.interpolate(v => `rgba(255, 255, 255, ${v})`) }}
       >
         <End>
@@ -90,6 +91,16 @@ const LorikeetNavbar = styled(animated.div)`
   z-index: 5;
   .brand {
     display: flex;
+  }
+  &.light {
+    ul div li span a span {
+      color: white;
+      opacity: 0.8;
+    }
+    ul div li.active span a span {
+      opacity: 1;
+      border-bottom: solid 1px white;
+    }
   }
 `
 
