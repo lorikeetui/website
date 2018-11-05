@@ -37,7 +37,7 @@ const FooterBox = styled.div`
   width: 100vw;
   height: auto;
   min-height: 300px;
-  background: #1A1D1D;
+  background: #333B47;
   padding: 100px 0;
 `
 const Container = styled.div`

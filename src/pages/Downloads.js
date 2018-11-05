@@ -10,6 +10,7 @@ import { breakpoint } from '@aragon/ui'
 import DownloadLink from '../components/DownloadLink.js'
 const large = css => breakpoint('large', css)
 const medium = css => breakpoint('medium', css)
+import Footer from '../components/Page/Footer'
 
 const Downloads = () => (
   <Page path="/downloads">
@@ -33,6 +34,7 @@ const Downloads = () => (
         </div>
       </Container>
     </DownloadsSection>
+    <Footer />
   </Page>
 )
 
