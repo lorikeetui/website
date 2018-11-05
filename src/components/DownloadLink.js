@@ -38,6 +38,7 @@ const LinkText = styled.p`
   color: #6DCBFE;
   padding-left: 20px;
   padding-right: 7px;
+  white-space: nowrap;
 `
 
 const Icon =styled.img`
