@@ -5,6 +5,7 @@ import { Text, breakpoint, BreakPoint, SafeLink } from '@aragon/ui'
 import MenuItem from './MenuItem'
 import MenuPanel from './MenuPanel'
 import { Spring, animated } from 'react-spring'
+import logo from './assets/footer-logo.svg'
 const medium = css => breakpoint('medium', css)
 
 const renderMenuItemLink = ({ url, children }) =>
@@ -38,10 +39,16 @@ class Navbar extends React.Component {
 
     return (
       <LorikeetNavbar className={path === '/downloads' ? 'light' : ''}
-        style={path === '/downloads' ? {background: x.interpolate(v => `rgba(51, 59, 71, ${v})`)} : { background: x.interpolate(v => `rgba(255, 255, 255, ${v})`) }}
-      >
+        style={path === '/downloads' ? {background: x.interpolate(v => `rgba(51, 59, 71)`)} : { background: x.interpolate(v => `rgba(255, 255, 255, ${v})`) }}
+      > 
+        <BreakPoint from="medium">
+          {path === '/downloads' && 
+            <Logo src={logo} />
+          }
+        </BreakPoint>
         <End>
           <BreakPoint from="medium">
+            
             <ul>
               {menuItems.map((item, i) => (
                 <div key={i}>
@@ -56,7 +63,7 @@ class Navbar extends React.Component {
             </ul>
           </BreakPoint>
           <BreakPoint to="medium">
-            <MenuPanel items={menuItems} renderLink={renderMenuItemLink} />
+            <MenuPanel items={menuItems} path={path} renderLink={renderMenuItemLink} />
           </BreakPoint>
         </End>
       </LorikeetNavbar>
@@ -93,6 +100,7 @@ const LorikeetNavbar = styled(animated.div)`
     display: flex;
   }
   &.light {
+    justify-content: space-between;
     ul div li span a span {
       color: white;
       opacity: 0.8;
@@ -102,6 +110,10 @@ const LorikeetNavbar = styled(animated.div)`
       border-bottom: solid 1px white;
     }
   }
+`
+
+const Logo = styled.img`
+  height: 41px;
 `
 
 const End = styled.div`

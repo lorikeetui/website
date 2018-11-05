@@ -5,6 +5,7 @@ import { Link } from 'react-static'
 import { Button, SafeLink } from '@aragon/ui'
 import SidePanel from './SidePanel'
 import menu from './assets/menu.svg'
+import menuWhite from './assets/menu-white.svg'
 
 class Panel extends React.Component {
   static propTypes = {
@@ -15,12 +16,12 @@ class Panel extends React.Component {
     opened: false,
   }
   render() {
-    const { items } = this.props
+    const { items, path } = this.props
     const { opened } = this.state
     return (
       <div>
         <Button mode="text" onClick={() => this.setState({ opened: true })}>
-          <img src={menu} />
+          <img src={path === '/downloads' ? menuWhite : menu } />
         </Button>
         <SidePanel
           title=""
