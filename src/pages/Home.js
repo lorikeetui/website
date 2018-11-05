@@ -11,8 +11,8 @@ import Footer from '../components/Page/Footer'
 const Home = () => (
   <Page path="/">
     <Hero />
-    <Examples />
-    <Tweets />
+    {/*<Examples />
+    <Tweets />*/}
     <Contributions />
     <Footer />
   </Page>
