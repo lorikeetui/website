@@ -43,7 +43,7 @@ class Navbar extends React.Component {
       > 
         <BreakPoint from="medium">
           {path === '/downloads' && 
-            <Logo src={logo} />
+            <Link to="/"><Logo src={logo} /></Link>
           }
         </BreakPoint>
         <End>
