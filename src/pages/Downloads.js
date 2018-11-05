@@ -20,7 +20,7 @@ const Downloads = () => (
           <Content>
             <Description>
               <P>Download some goodies to start designing your decentralized apps. This is an ever growing collection of components for Sketch and Figma, and interactive components for Framer X.</P>
-              <P>If you would like to contribute to designing new components, please get in touch! The best way is to open an issue on 
+              <P>If you would like to contribute to designing new components, please get in touch! The best way is to open an issue on {' '}
                 <A href={"https://github.com/lorikeetui/design/issues"}>https://github.com/lorikeetui/design/issues</A>
               </P>
             </Description>
