@@ -17,17 +17,17 @@ const Footer = () => (
       </Box>
       <LinkBox>
         <Title>Resources</Title>
-        <a>Design guidelines</a>
-        <a>Reference</a>
-        <a>Tutorials</a>
+        <a href="docs.lorikeet.design/principles">Design guidelines</a>
+        <a href="docs.lorikeet.design/buttons">Reference</a>
+        <a href="docs.lorikeet.design/how-to-contribute">Contributing</a>
         <a>Downloads</a>
       </LinkBox>
       <LinkBox>
         <Title>Channels</Title>
-        <a>Github</a>
-        <a>Twitter</a>
-        <a>Matrix</a>
-        <a>Email</a>
+        <a href="https://github.com/lorikeetui/lorikeet" target="_blank">Github</a>
+        <a href="https://twitter.com/lorikeetui" target="_blank">Twitter</a>
+        <a href="https://matrix.to/#/!xXlJVgDUrpIXVQkkrq:matrix.org" target="_blank">Matrix</a>
+        <a href="mailto:jouni@aragon.one" target="_blank">Email</a>
       </LinkBox>
     </Container>
   </FooterBox>
