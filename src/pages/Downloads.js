@@ -1,11 +1,10 @@
-import React, { Fragment } from 'react'
+import React  from 'react'
 import { Page } from '../components'
-import { Text } from '@aragon/ui'
 import styled from 'styled-components'
 import Section from '../components/Page/Section'
 import figmaSVG from './assets/figma.svg'
-import SketchSVG from './assets/sketch.svg'
-import FramerSVG from './assets/framer.svg'
+import sketchSVG from './assets/sketch.svg'
+import framerSVG from './assets/framer.svg'
 import { breakpoint } from '@aragon/ui'
 import DownloadLink from '../components/DownloadLink.js'
 const large = css => breakpoint('large', css)
@@ -26,9 +25,9 @@ const Downloads = () => (
               </P>
             </Description>
             <DownloadWrapper>
-              <DownloadLink src={SketchSVG} text={"Download for Sketch"} href={"#"}/>
+              <DownloadLink src={sketchSVG} text={"Download for Sketch"} href={"#"}/>
               <DownloadLink src={figmaSVG} text={"Download for Figma"} href={"#"}/>
-              <DownloadLink src={FramerSVG} text={"Download for Framer X"} href={"#"}/>
+              <DownloadLink src={framerSVG} text={"Download for Framer X"} href={"#"}/>
             </DownloadWrapper>
           </Content>
         </div>
@@ -61,7 +60,7 @@ const A = styled.a`
   word-break: break-all;
 `
 
-const Description = styled.p`
+const Description = styled.span`
   font-size: 17px;
   color: #fff;
   width: 100%;

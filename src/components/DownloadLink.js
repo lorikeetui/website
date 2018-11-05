@@ -1,11 +1,18 @@
 import styled from 'styled-components'
 import React from 'react'
-import DownloadIconSVG from '../pages/assets/downloadicon.svg'
+import downloadIconSVG from '../pages/assets/downloadicon.svg'
 
 const DownloadLink = (props) =>
   <LinkWrapper>
-    <IconContainer><Icon src={props.src} /></IconContainer>
-    <DownLink href={props.href}><InsideLinkWarpper><LinkText>{props.text}</LinkText><DownloadIcon src={DownloadIconSVG}/></InsideLinkWarpper></DownLink>
+    <IconContainer>
+      <Icon src={props.src} />
+    </IconContainer>
+    <DownLink href={props.href}>
+      <InsideLinkWarpper>
+        <LinkText>{props.text}</LinkText>
+        <DownloadIcon src={downloadIconSVG}/>
+      </InsideLinkWarpper>
+    </DownLink>
   </LinkWrapper>
 
 export default DownloadLink
