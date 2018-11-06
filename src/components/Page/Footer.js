@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from './assets/footer-logo.svg'
+import { Link } from 'react-static'
 import powered from './assets/powered-by-aragon.svg'
 import { breakpoint, SafeLink } from '@aragon/ui'
 const medium = css => breakpoint('medium', css)
@@ -20,7 +21,7 @@ const Footer = () => (
         <a href="docs.lorikeet.design/principles">Design guidelines</a>
         <a href="docs.lorikeet.design/buttons">Reference</a>
         <a href="docs.lorikeet.design/how-to-contribute">Contributing</a>
-        <a>Downloads</a>
+        <Link to="/downloads">Downloads</Link>
       </LinkBox>
       <LinkBox>
         <Title>Channels</Title>
@@ -84,6 +85,9 @@ const LinkBox = styled.div`
   margin-top: 66px;
   margin-bottom: 50px;
   ${medium('width: 33%; margin-top: 0; margin-bottom: 0;')};
+  a {
+    text-decoration: none;
+  }
 `
 
 const Box = styled.div`

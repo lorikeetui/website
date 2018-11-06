@@ -40,6 +40,7 @@ const Content = styled.div`
   }
   a {
     outline: none;
+    text-decoration: none;
   }
 `
 
