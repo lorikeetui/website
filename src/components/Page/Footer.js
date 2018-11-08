@@ -18,9 +18,9 @@ const Footer = () => (
       </Box>
       <LinkBox>
         <Title>Resources</Title>
-        <a href="docs.lorikeet.design/principles">Design guidelines</a>
-        <a href="docs.lorikeet.design/buttons">Reference</a>
-        <a href="docs.lorikeet.design/how-to-contribute">Contributing</a>
+        <a href="https://docs.lorikeet.design">Design guidelines</a>
+        <a href="https://docs.lorikeet.design/buttons">Reference</a>
+        <a href="https://docs.lorikeet.design/how-to-contribute">Contributing</a>
         <Link to="/downloads">Downloads</Link>
       </LinkBox>
       <LinkBox>
