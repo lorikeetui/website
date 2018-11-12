@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import styled from 'styled-components'
 import { SafeLink } from '@aragon/ui'
 
@@ -13,7 +13,7 @@ class Projects extends React.Component {
   }
 
   componentDidMount(){
-    fetch('https://api.github.com/repos/aragon/aragon/contributors')
+    fetch('https://api.github.com/repos/aragon/aragon-ui/contributors')
     .then(res => res.json())
     .then(json => {
       console.log(json)
@@ -22,22 +22,17 @@ class Projects extends React.Component {
         loading: false
       })
     })
-    .catch(console.log('erro'))
+    .catch(err => console.log(err))
   };
 
   render() {
-    return <Contributors data={this.state.items}/>
-  }
+    return (
+        <Container href="https://github.com/lorikeetui/lorikeet/graphs/contributors"
+        target="_blank">>
+          {this.state.items.map(item => <Image src={item.avatar_url} />)}
+        </Container>
+    )}
 }
-const Contributors = ({ data }) => (
-  <Container
-    href="https://github.com/lorikeetui/lorikeet/graphs/contributors"
-    target="_blank"
-  >
-  {data.map(item =>  <Image src={item.avatar_url} />)}
-
-  </Container>
-)
 
 const Container = styled(SafeLink)`
   margin: 20px auto;
