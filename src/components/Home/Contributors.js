@@ -28,8 +28,8 @@ class Projects extends React.Component {
   render() {
     return (
         <Container href="https://github.com/lorikeetui/lorikeet/graphs/contributors"
-        target="_blank">>
-          {this.state.items.map(item => <Image src={item.avatar_url} />)}
+        target="_blank">
+          {this.state.items.map(item => <Image key={item.id} src={item.avatar_url} />)}
         </Container>
     )}
 }
