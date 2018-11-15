@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, SiteData, RouteData, Head } from 'react-static'
 import styled from 'styled-components'
-import { AragonApp, AppBar, breakpoint } from '@aragon/ui'
+import { AppBar, BaseStyles, PublicUrl, breakpoint } from '@aragon/ui'
 import Navbar from './Navbar'
 const medium = css => breakpoint('medium', css)
 
@@ -14,13 +14,14 @@ class Page extends React.Component {
         render={({ title: siteTitle }) => (
           <RouteData
             render={({ title }) => (
-              <AragonApp publicUrl="/aragon-ui/" className="app">
+              <PublicUrl.Provider url="/aragon-ui/">
+                <BaseStyles enableLegacyFonts />
                 <Head>
                   <title>{title || siteTitle}</title>
                 </Head>
                 <Navbar menuItems={items} path={path} />
                 <Content>{children}</Content>
-              </AragonApp>
+              </PublicUrl.Provider>
             )}
           />
         )}
