@@ -44,8 +44,12 @@ const Container = styled(SafeLink)`
 `
 const Image = styled.img`
   margin: 5px 10px;
-  height: 52px;
+  height: 70px;
   border-radius: 50%;
+  border: solid 1px #6691bd;
+  padding: 3px;
+  width: 70px;
+}
 `
 
 export default Projects
