@@ -63,7 +63,9 @@ const Title = styled.h1`
 `
 
 const Logo = styled.img`
-  max-width: 57%;
+  max-width: 344px;
+  min-width: 225px;
+  width: 75%;
   margin-bottom: 20px;
 `
 const ImageContainer = styled.div`
