@@ -20,7 +20,7 @@ const Projects = () => (
         <Contributors />
         <ButtonsBox>
           <StyledBlackButton href="https://github.com/lorikeetui/lorikeet" target="_blank"><img src={github}/>View on github</StyledBlackButton>
-          <StyledBLueButton>Check the docs</StyledBLueButton>
+          <StyledBlueButton href="https://github.com/lorikeetui/docs" target="_blank">Check the docs</StyledBlueButton>
         </ButtonsBox>
       </Container>
     </OuterContainer>
@@ -88,7 +88,7 @@ const StyledBlackButton = styled(Button.Anchor)`
   }
 `
 
-const StyledBLueButton = styled(Button)`
+const StyledBlueButton = styled(Button.Anchor)`
   background-image: linear-gradient(-141deg, #6993fb 0%, #6dcbfe 100%);
   border-radius: 4px;
   font-weight: 700;
